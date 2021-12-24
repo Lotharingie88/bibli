@@ -1,0 +1,29 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 432
+    Top = 16
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Database=bibliotheque'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
+    Left = 480
+    Top = 16
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 520
+    Top = 16
+  end
+end
