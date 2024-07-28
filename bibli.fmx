@@ -1,29 +1,176 @@
-object Form1: TForm1
+object FBibli: TFBibli
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  ActiveControl = TabCD
+  Caption = 'Bibli'
   ClientHeight = 480
-  ClientWidth = 640
+  ClientWidth = 380
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
-  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    Left = 432
-    Top = 16
+  object Panel1: TPanel
+    Position.X = 40.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 289.000000000000000000
+    Size.Height = 417.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 376.000000000000000000
+      Size.Width = 289.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object btQuit: TButton
+        Align = Vertical
+        Position.X = 80.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Quitter'
+        OnClick = btQuitClick
+      end
+      object btSync: TButton
+        Align = Vertical
+        Position.X = 152.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Syncro loc/Distant'
+        OnClick = btSyncClick
+      end
+      object btCreate: TButton
+        Align = Vertical
+        Position.X = 8.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Cr'#233'er la base'
+      end
+    end
+    object TabControl1: TTabControl
+      Size.Width = 289.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 3
+      TabOrder = 2
+      TabPosition = PlatformDefault
+      Sizes = (
+        289s
+        0s
+        289s
+        0s
+        289s
+        0s
+        289s
+        0s)
+      object TabLivr: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 50.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Livres'
+        OnClick = TabLivrClick
+        ExplicitSize.cx = 50.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+      end
+      object TabRevu: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 58.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Revues'
+        OnClick = TabRevuClick
+        ExplicitSize.cx = 58.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+      end
+      object TabDVD: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 44.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'DVD'
+        OnClick = TabDVDClick
+        ExplicitSize.cx = 44.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+      end
+      object TabCD: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 36.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'CD'
+        OnClick = TabCDClick
+        ExplicitSize.cx = 36.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+      end
+    end
+    object btBudg: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 336.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Suivi Budget Culture'
+      OnClick = btBudgClick
+    end
+    object btAdmin: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 336.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Administration'
+      OnClick = btAdminClick
+    end
   end
-  object FDConnection1: TFDConnection
-    Params.Strings = (
-      'User_Name=root'
-      'Database=bibliotheque'
-      'Server=127.0.0.1'
-      'DriverID=MySQL')
-    Left = 480
-    Top = 16
+  object FDQueryMYSQL: TFDQuery
+    Connection = DataModule2.FDConnectMysql
+    FormatOptions.AssignedValues = [fvFmtDisplayDate]
+    FormatOptions.FmtDisplayDate = 'yyyy-mm-dd'
+    Left = 320
+    Top = 8
   end
-  object FDQuery1: TFDQuery
-    Connection = FDConnection1
-    Left = 520
-    Top = 16
+  object FDQuerySQLITE: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 304
+    Top = 104
+  end
+  object FDQuerySQLITE2: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 312
+    Top = 176
+  end
+  object FDQuerySQLITE3: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 304
+    Top = 248
   end
 end
