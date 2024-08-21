@@ -1,5 +1,5 @@
 object DataModule2: TDataModule2
-  Height = 480
+  Height = 500
   Width = 640
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
     Left = 24
@@ -37,7 +37,6 @@ object DataModule2: TDataModule2
     Top = 8
   end
   object FDQuerThem: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtheme,theme from thematique where dvd=1 order by theme')
@@ -162,7 +161,6 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerThemL: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -280,7 +278,46 @@ object DataModule2: TDataModule2
     SQL.Strings = (
       'select idtitre,titre from livres order by titre'
       '')
-    Left = 264
+    Left = 232
     Top = 384
+  end
+  object FDQuerChant: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      
+        'select idactreal, nomactreal||'#39' '#39'||prenactreal as chan from actr' +
+        'eal where chant =1 order by chan')
+    Left = 328
+    Top = 384
+  end
+  object FDQuerPerio: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      'select idperiodicite,periode from periodicite')
+    Left = 392
+    Top = 80
+  end
+  object FDQuerThemCd: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      'select idtheme,theme from thematique where cd=1 order by theme')
+    Left = 400
+    Top = 384
+  end
+  object FDQuerCdGlob: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      
+        'select cdnom as titre, b.nomactreal as chanteur,c.theme as genre' +
+        ',ansort as sortie, note, d.nom as pays  from cd as a left join a' +
+        'ctreal as b on a.idinterpret =b.idactreal left join thematique a' +
+        's c on a.idgenr=c.idtheme left join pays as d on a.idnation=d.id' +
+        'nation')
+    Left = 424
+    Top = 160
   end
 end

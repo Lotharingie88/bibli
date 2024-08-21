@@ -26,7 +26,12 @@ uses
   bibli_DvdAct in 'bibli_DvdAct.pas' {fDvdact},
   bibli_dvdajo in 'bibli_dvdajo.pas' {fDvdAjo},
   bibli_dvdacha in 'bibli_dvdacha.pas' {fDvdacha},
-  bibli_user in 'bibli_user.pas' {FBuser};
+  bibli_user in 'bibli_user.pas' {FBuser},
+  bibli_cdcons in 'bibli_cdcons.pas' {Fbibli_cdcons},
+  bibli_cdach in 'bibli_cdach.pas' {Fbibli_cdach},
+  bibli_cdaj in 'bibli_cdaj.pas' {Fbibli_cdaj},
+  admin in 'admin.pas' {Fadmin},
+  bibli_param in 'bibli_param.pas' {Fbparam};
 
 {$R *.res}
 
@@ -55,5 +60,13 @@ begin
   Application.CreateForm(TfDvdAjo, fDvdAjo);
   Application.CreateForm(TfDvdacha, fDvdacha);
   Application.CreateForm(TFBuser, FBuser);
+  Application.CreateForm(TFcdcons, Fcdcons);
+  Application.CreateForm(TFcdcons, Fcdcons);
+  Application.CreateForm(TFcdach, Fcdach);
+  Application.CreateForm(TFcdach, Fcdach);
+  Application.CreateForm(TFcdaj, Fcdaj);
+  Application.CreateForm(TFcdaj, Fcdaj);
+  Application.CreateForm(TFadmin, Fadmin);
+  Application.CreateForm(TFbparam, Fbparam);
   Application.Run;
 end.

@@ -44,6 +44,10 @@ type
     FDQuerProc2: TFDQuery;
     FDQuerAct3: TFDQuery;
     FDQuerLivBas: TFDQuery;
+    FDQuerChant: TFDQuery;
+    FDQuerPerio: TFDQuery;
+    FDQuerThemCd: TFDQuery;
+    FDQuerCdGlob: TFDQuery;
   private
     { Déclarations privées }
   public

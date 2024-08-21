@@ -11,7 +11,7 @@ Coordinates=82,1,144,33
 Coordinates=82,1,98,33
 
 [FDQuerThem]
-Coordinates=330,100,79,87
+Coordinates=330,100,79,51
 
 [FDQuerFilm]
 Coordinates=10,60,73,87
@@ -26,14 +26,14 @@ Coordinates=340,190,73,87
 Coordinates=230,260,72,87
 
 [FDTabPays]
-Coordinates=20,170,70,123
+Coordinates=20,170,70,141
 
 []
 Coordinates=240,10,90,33
 Visible=True
 
 [FDTabGenre]
-Coordinates=110,0,76,159
+Coordinates=110,0,76,195
 
 [FDQuerNomAct]
 Coordinates=440,0,91,87
@@ -54,7 +54,7 @@ Coordinates=130,170,71,105
 Coordinates=332,1,75,87
 
 [FDQuerThemL]
-Coordinates=340,290,85,87
+Coordinates=340,290,85,51
 
 [FDQuerCd]
 Coordinates=230,360,65,87
@@ -91,4 +91,16 @@ Coordinates=457,372,74,87
 
 [FDQuerLivBas]
 Coordinates=20,500,85,87
+
+[FDQuerChant]
+Coordinates=102,42,81,87
+
+[FDQuerPerio]
+Coordinates=181,525,77,87
+
+[FDQuerThemCd]
+Coordinates=112,525,93,87
+
+[FDQuerCdGlob]
+Coordinates=634,1,89,159
 

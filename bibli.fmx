@@ -31,6 +31,7 @@ object FBibli: TFBibli
         Size.PlatformDefault = False
         TabOrder = 4
         Text = 'Quitter'
+        TextSettings.Trimming = None
         OnClick = btQuitClick
       end
       object btSync: TButton
@@ -41,6 +42,7 @@ object FBibli: TFBibli
         Size.PlatformDefault = False
         TabOrder = 6
         Text = 'Syncro loc/Distant'
+        TextSettings.Trimming = None
         OnClick = btSyncClick
       end
       object btCreate: TButton
@@ -51,6 +53,7 @@ object FBibli: TFBibli
         Size.PlatformDefault = False
         TabOrder = 5
         Text = 'Cr'#233'er la base'
+        TextSettings.Trimming = None
       end
     end
     object TabControl1: TTabControl
@@ -73,6 +76,7 @@ object FBibli: TFBibli
         CustomIcon = <
           item
           end>
+        TextSettings.Trimming = None
         IsSelected = False
         Size.Width = 50.000000000000000000
         Size.Height = 26.000000000000000000
@@ -88,6 +92,7 @@ object FBibli: TFBibli
         CustomIcon = <
           item
           end>
+        TextSettings.Trimming = None
         IsSelected = False
         Size.Width = 58.000000000000000000
         Size.Height = 26.000000000000000000
@@ -103,6 +108,7 @@ object FBibli: TFBibli
         CustomIcon = <
           item
           end>
+        TextSettings.Trimming = None
         IsSelected = False
         Size.Width = 44.000000000000000000
         Size.Height = 26.000000000000000000
@@ -118,6 +124,7 @@ object FBibli: TFBibli
         CustomIcon = <
           item
           end>
+        TextSettings.Trimming = None
         IsSelected = True
         Size.Width = 36.000000000000000000
         Size.Height = 26.000000000000000000
@@ -138,6 +145,7 @@ object FBibli: TFBibli
       Size.PlatformDefault = False
       TabOrder = 3
       Text = 'Suivi Budget Culture'
+      TextSettings.Trimming = None
       OnClick = btBudgClick
     end
     object btAdmin: TButton
@@ -148,6 +156,7 @@ object FBibli: TFBibli
       Size.PlatformDefault = False
       TabOrder = 5
       Text = 'Administration'
+      TextSettings.Trimming = None
       OnClick = btAdminClick
     end
   end

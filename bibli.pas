@@ -56,7 +56,7 @@ implementation
 
 {$R *.NmXhdpiPh.fmx ANDROID}
 
-uses bibli_liv1,bibli_revue,bibli_budget,bibli_dvd,bibli_cd,bibli_user;
+uses bibli_liv1,bibli_revue,bibli_budget,bibli_dvd,bibli_cd,bibli_user,admin;
 procedure TFBibli.btSyncClick(Sender: TObject);
 var
  i,j,card,ind  : integer;
@@ -219,8 +219,7 @@ end;
 
 procedure TFBibli.btAdminClick(Sender: TObject);
 begin
-  fbuser.Tag:=1;
-    fbuser.show;
+    fadmin.show;
 end;
 
 procedure TFBibli.btBudgClick(Sender: TObject);
