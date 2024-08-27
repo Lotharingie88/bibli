@@ -1,0 +1,58 @@
+inherited FBibli_NmXhdpiPh: TFBibli_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Position.X = 8.000000000000000000
+    Position.Y = 48.000000000000000000
+    inherited ToolBar1: TToolBar
+      Position.Y = 435.000000000000000000
+      Size.Height = 48.000000000000000000
+      inherited btQuit: TButton
+        Size.Height = 48.000000000000000000
+      end
+      inherited btSync: TButton
+        Size.Height = 48.000000000000000000
+      end
+      inherited btCreate: TButton
+        Size.Height = 48.000000000000000000
+      end
+    end
+    inherited TabControl1: TTabControl
+      TabHeight = 49.000000000000000000
+      Sizes = (
+        289s
+        0s
+        289s
+        0s
+        289s
+        0s
+        289s
+        0s)
+      inherited TabLivr: TTabItem
+        Size.Width = 48.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 273.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabRevu: TTabItem
+        Size.Width = 53.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 137.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabDVD: TTabItem
+        Size.Width = 32.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 91.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabCD: TTabItem
+        Size.Width = 24.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+    end
+  end
+end

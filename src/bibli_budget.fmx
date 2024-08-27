@@ -1,0 +1,64 @@
+object FBudget: TFBudget
+  Left = 0
+  Top = 0
+  Caption = 'Bibli/Budget'
+  ClientHeight = 493
+  ClientWidth = 286
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Size.Width = 286.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 444.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object btPrec: TButton
+      Position.Y = 444.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Retour'
+      TextSettings.Trimming = None
+      OnClick = btPrecClick
+    end
+    object btQuit: TButton
+      Position.X = 145.000000000000000000
+      Position.Y = 444.000000000000000000
+      Size.Width = 139.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Quitter'
+      TextSettings.Trimming = None
+      OnClick = btQuitClick
+    end
+    object btBPAnn: TButton
+      Position.Y = 8.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Budget pluri annuel'
+      TextSettings.Trimming = None
+    end
+    object btBAnn: TButton
+      Position.Y = 64.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Budget Ann'#233'e'
+      TextSettings.Trimming = None
+    end
+  end
+end

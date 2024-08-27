@@ -1,0 +1,97 @@
+object FLiv: TFLiv
+  Left = 0
+  Top = 0
+  Caption = 'Livres'
+  ClientHeight = 480
+  ClientWidth = 268
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 441.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btLivBas: TButton
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Consulter base Livre'
+      OnClick = btLivBasClick
+    end
+    object btEditMaj: TButton
+      Position.Y = 176.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Ajouter/Modifier Editeur'
+      OnClick = btEditMajClick
+    end
+    object btLivMaj: TButton
+      Position.Y = 120.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Ajouter/Modifier Livre'
+      OnClick = btLivMajClick
+    end
+    object btPret: TButton
+      Position.Y = 240.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Emprunter/Rendre'
+      OnClick = btPretClick
+    end
+    object btAcha: TButton
+      Position.Y = 296.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Achat Livre'
+      OnClick = btAchaClick
+    end
+    object btAuteur: TButton
+      Position.Y = 64.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Ajouter/Modifier Auteur'
+      OnClick = btAuteurClick
+    end
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object btQuit: TButton
+        Position.X = 120.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        OnClick = btQuitClick
+      end
+      object btPrec: TButton
+        Size.Width = 121.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Retour'
+        OnClick = btPrecClick
+      end
+    end
+  end
+end

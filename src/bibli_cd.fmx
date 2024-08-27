@@ -1,0 +1,109 @@
+object Fcd: TFcd
+  Left = 0
+  Top = 0
+  Caption = 'CD'
+  ClientHeight = 480
+  ClientWidth = 269
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 441.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        Position.X = -1.000000000000000000
+        Size.Width = 124.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Retour'
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btQuit: TButton
+        Position.X = 117.000000000000000000
+        Size.Width = 124.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+    end
+    object btCons: TButton
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Consulter base CD'
+      TextSettings.Trimming = None
+      OnClick = btConsClick
+    end
+    object btIntaj: TButton
+      Position.X = -1.000000000000000000
+      Position.Y = 65.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Ajouter/Modifier Interpr'#232'te'
+      TextSettings.Trimming = None
+      OnClick = btIntajClick
+    end
+    object btCdaj: TButton
+      Position.X = -1.000000000000000000
+      Position.Y = 127.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Ajouter/Modifier CD'
+      TextSettings.Trimming = None
+      OnClick = btCdajClick
+    end
+    object Button6: TButton
+      Position.Y = 192.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Button6'
+      TextSettings.Trimming = None
+      Visible = False
+    end
+    object btPret: TButton
+      Position.Y = 256.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Emprunter/Rendre'
+      TextSettings.Trimming = None
+      OnClick = btPretClick
+    end
+    object btCdach: TButton
+      Position.X = -1.000000000000000000
+      Position.Y = 321.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Achat CD'
+      TextSettings.Trimming = None
+      OnClick = btCdachClick
+    end
+  end
+end
