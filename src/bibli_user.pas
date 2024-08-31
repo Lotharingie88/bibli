@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts,udb, FMX.ListBox,
   FMX.Edit, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors,firedac.Stan.Param,
-  Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
+  Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope,system.Hash;
 
 type
   TFBuser = class(TForm)
@@ -137,10 +137,13 @@ begin
                  datamodule2.fdQuerproc.Close;
                  datamodule2.fdQuerproc.SQL.Clear;
               datamodule2.fdQuerproc.SQL.Text:='UPDATE utilisateur SET telephone = :phon,email=:mel,pwd=:mdp,cprofil=:cpro,activite=:cact,pseudo=:pseu, datdeb=:deb,datfin=:fin, datmaj = :maj  WHERE iduser = :id' ;
-              datamodule2.fdQuerproc.ParamByName('phon').Asstring := edphon.text;
+              if edphon.text<>'' then
+                  datamodule2.fdQuerproc.ParamByName('phon').Asstring := edphon.text
+                  else
+                  datamodule2.fdQuerproc.ParamByName('phon').Asstring :='0';
               datamodule2.fdQuerproc.ParamByName('mel').Asstring  := edmel.text;
               datamodule2.fdQuerproc.ParamByName('pseu').Asstring  := edpseudo.text;
-              datamodule2.fdQuerproc.ParamByName('mdp').Asstring := edmdp.text;
+              datamodule2.fdQuerproc.ParamByName('mdp').Asstring :=THashSHA2.GetHashString(edMdp.text,THashSHA2.TSHA2Version.SHA512).ToUpper;
               datamodule2.fdQuerproc.ParamByName('cpro').Asinteger := pro;
               datamodule2.fdQuerproc.ParamByName('cact').AsInteger := act;
               datamodule2.fdQuerproc.ParamByName('deb').AsString := eddeb.Text;
@@ -167,9 +170,12 @@ begin
                  datamodule2.fdQuerproc.ParamByName('nom').AsString := ednom.Text;
                  datamodule2.fdQuerproc.ParamByName('pren').Asstring := edpren.text;
                  datamodule2.fdQuerproc.ParamByName('mail').Asstring := edmel.text;
-                 datamodule2.fdQuerproc.ParamByName('mdp').Asstring := edmdp.text;
+                 datamodule2.fdQuerproc.ParamByName('mdp').Asstring := THashSHA2.GetHashString(edMdp.text,THashSHA2.TSHA2Version.SHA512).ToUpper;
                  datamodule2.fdQuerproc.ParamByName('pseu').Asstring := edpseudo.text;
-                 datamodule2.fdQuerproc.ParamByName('phon').Asstring := edphon.text;
+                 if edphon.text<>'' then
+                  datamodule2.fdQuerproc.ParamByName('phon').Asstring := edphon.text
+                  else
+                  datamodule2.fdQuerproc.ParamByName('phon').Asstring :='0';
                  datamodule2.fdQuerproc.ParamByName('cpro').Asinteger := pro;
                  datamodule2.fdQuerproc.ParamByName('cact').AsInteger := act;
                  datamodule2.fdQuerproc.ParamByName('deb').AsString := eddeb.text ;

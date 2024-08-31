@@ -13,7 +13,7 @@ uses
   FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.TabControl,uDB, FireDAC.FMXUI.Login,
-  FireDAC.Comp.UI, FMX.Edit, FMX.Layouts,FMX.Platform;
+  FireDAC.Comp.UI, FMX.Edit, FMX.Layouts,FMX.Platform,System.Hash;
 
 type
   TFBibli = class(TForm)
@@ -253,7 +253,7 @@ begin
                        datamodule2.fdQuerproc.ParamByName('nom').AsString := ednom.Text;
                        datamodule2.fdQuerproc.ParamByName('pren').Asstring := edpren.text;
                        datamodule2.fdQuerproc.ParamByName('mel').Asstring := edMel.text;
-                       datamodule2.fdQuerproc.ParamByName('mdp').AsString := edMdp.text ;
+                       datamodule2.fdQuerproc.ParamByName('mdp').AsString := THashSHA2.GetHashString(edMdp.text,THashSHA2.TSHA2Version.SHA512).ToUpper ;
                        datamodule2.fdQuerproc.ParamByName('deb').AsDate := StrToDate(Datmaj);
                        datamodule2.fdQuerproc.ParamByName('maj').AsDate := StrToDate(Datmaj);
                        datamodule2.fdQuerproc.ExecSQL;
@@ -319,7 +319,7 @@ begin
                 datamodule2.fdQuerproc.SQL.Clear;
                  datamodule2.fdQuerproc.SQL.Text:='select count(*) as nb from utilisateur where pseudo=:nom and pwd=:mdp';
                  datamodule2.fdQuerproc.ParamByName('nom').AsString := edLog.text;
-                 datamodule2.fdQuerproc.ParamByName('mdp').AsString := edMdp.text;
+                 datamodule2.fdQuerproc.ParamByName('mdp').AsString := THashSHA2.GetHashString(edMdp.text,THashSHA2.TSHA2Version.SHA512).ToUpper ;
                  datamodule2.fdQuerproc.open;
                  nb:=datamodule2.fdQuerproc.FieldByName('nb').AsInteger ;
                  datamodule2.fdQuerproc.Close;
@@ -329,7 +329,7 @@ begin
                       datamodule2.fdQuerproc.SQL.Clear;
                       datamodule2.fdQuerproc.SQL.Text:='select  iduser,pseudo,b.profil from utilisateur as a left join profil as b on a.cprofil=b.cprofil where pseudo=:nom and pwd=:mdp';
                       datamodule2.fdQuerproc.ParamByName('nom').AsString := edLog.text;
-                      datamodule2.fdQuerproc.ParamByName('mdp').AsString := edMdp.text;
+                      datamodule2.fdQuerproc.ParamByName('mdp').AsString := THashSHA2.GetHashString(edMdp.text,THashSHA2.TSHA2Version.SHA512).ToUpper ;
                       datamodule2.fdQuerproc.open;
                       id:=datamodule2.fdQuerproc.FieldByName('iduser').AsInteger ;
                       pseu:= datamodule2.fdQuerproc.FieldByName('pseudo').AsString ;
@@ -340,19 +340,28 @@ begin
                         begin
                            btAdmin.visible:=true;
                            btBudg.Visible:=true;
-
+                           tabLivr.Enabled:=true;
+                           tabCd.Enabled:=true;
+                           tabDvd.Enabled:=true;
+                           tabRevu.Enabled:=true;
                         end;
                       If prof='UTILISATEUR' then
                        begin
                             btAdmin.visible:=false;
                             btBudg.Visible:=false;
-
+                            tabLivr.Enabled:=true;
+                           tabCd.Enabled:=true;
+                           tabDvd.Enabled:=true;
+                           tabRevu.Enabled:=true;
                        end;
                       If prof='EMPRUNTEUR' then
                         begin
                             btAdmin.visible:=false;
                             btBudg.Visible:=false;
-
+                            tabLivr.Enabled:=true;
+                           tabCd.Enabled:=true;
+                           tabDvd.Enabled:=true;
+                           tabRevu.Enabled:=true;
                         end;
                        //datamodule2.fdQuerproc.SQL.Text:='INSERT into session(idsession,nom,prenom,pseudo,datdeb) VALUES (:idsess,:nom,:pren,:pseu,:deb)';
                        datamodule2.fdQuerproc.SQL.Text:='INSERT into session(nom,prenom,pseudo,datdeb) VALUES (:nom,:pren,:pseu,:deb)';

@@ -52,6 +52,7 @@ type
     procedure btModClick(Sender: TObject);
     procedure btNouvClick(Sender: TObject);
     procedure btRecClick(Sender: TObject);
+    procedure cbCdtitChange(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -233,6 +234,38 @@ begin
   btmod.Enabled:=false;
   btrec.Enabled:=true;
   btnouv.Enabled:=false;
+end;
+
+procedure TFcdaj.cbCdtitChange(Sender: TObject);
+begin
+              datamodule2.fdQuerproc.Close;
+              datamodule2.fdQuerproc.SQL.Clear;
+              datamodule2.fdQuerproc.SQL.Text:='SELECT count(*) as nb from cd where cdnom =:tit ' ;
+              datamodule2.fdQuerproc.ParamByName('tit').AsString := cbCdtit.Selected.text;
+              datamodule2.fdQuerproc.Open;
+              nb:=datamodule2.fdQuerproc.FieldByName('nb').AsInteger;
+              datamodule2.fdQuerproc.Close;
+              if nb=1 then
+                 begin
+
+                     datamodule2.fdQuerproc.Close;
+                     datamodule2.fdQuerproc.SQL.Clear;
+                     req:='SELECT idcd, nomactreal||" "||prenactreal as nom,c.theme,ansort,d.nom,note,avis, a.datmaj from cd as a' ;
+                     req:=req + ' left join actreal as b on a.idinterpret=b.idactreal left join thematique as c on a.idgenr=c.idtheme left join pays as d on a.idnation=d.idnation';
+                     req:=req + ' where cdnom =:tit ' ;
+                     datamodule2.fdQuerproc.SQL.Text:=req ;
+                     datamodule2.fdQuerproc.ParamByName('tit').AsString := cbCdtit.Selected.Text;
+                     datamodule2.fdQuerproc.Open;
+                     cbInterp.Selected.Text:=datamodule2.fdQuerproc.FieldByName('nom').AsString;
+                     cbGenrcd.Selected.text :=datamodule2.fdQuerproc.FieldByName('theme').AsString;
+                     cbPayscd.Selected.text :=datamodule2.fdQuerproc.FieldByName('nom').AsString;
+                     edCddat.text:=datamodule2.fdQuerproc.FieldByName('ansort').AsString;
+                     edCdnot.text:=datamodule2.fdQuerproc.FieldByName('note').AsString;
+                     memCd.Text:=datamodule2.fdQuerproc.FieldByName('avis').AsString;
+                     edMaj.text:=datamodule2.fdQuerproc.FieldByName('datmaj').AsString;
+                     datamodule2.fdQuerproc.Close;
+
+                 end;
 end;
 
 procedure TFcdaj.FormActivate(Sender: TObject);

@@ -258,6 +258,7 @@ object Fcdaj: TFcdaj
           'CONGO REP DEMOCRATIQUE'
           'ZAMBIE'
           'ZIMBABWE')
+        ItemIndex = 0
         Position.X = 64.000000000000000000
         Position.Y = -7.000000000000000000
         Size.Width = 209.000000000000000000
@@ -281,6 +282,7 @@ object Fcdaj: TFcdaj
           'METAL'
           'ROCK'
           'VARIETE')
+        ItemIndex = 0
         Position.X = 65.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 25.000000000000000000
@@ -407,6 +409,7 @@ object Fcdaj: TFcdaj
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
+      OnChange = cbCdtitChange
     end
   end
   object ToolBar1: TToolBar
@@ -491,6 +494,8 @@ object Fcdaj: TFcdaj
     end
     object LinkFillControlToField3: TLinkFillControlToField
       Category = 'Liaisons rapides'
+      DataSource = BindSourceDB3
+      FieldName = 'nom'
       Control = cbPayscd
       Track = True
       FillDataSource = BindSourceDB3
@@ -502,6 +507,8 @@ object Fcdaj: TFcdaj
     end
     object LinkFillControlToField4: TLinkFillControlToField
       Category = 'Liaisons rapides'
+      DataSource = BindSourceDB5
+      FieldName = 'theme'
       Control = cbGenrcd
       Track = True
       FillDataSource = BindSourceDB5

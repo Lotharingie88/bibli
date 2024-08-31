@@ -190,6 +190,7 @@ object FBuser: TFBuser
       object cbUser: TComboBox
         Items.Strings = (
           'CAZAUX-DUSSOUX HERVE'
+          'EINSTEIN ALBERT'
           'POTIRON MURIEL'
           'Pascolia Laetitia'
           'Thouvenot Sylvain'
@@ -198,7 +199,7 @@ object FBuser: TFBuser
         Size.Width = 209.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 3
+        TabOrder = 4
         Visible = False
         OnChange = cbUserChange
       end
@@ -226,7 +227,7 @@ object FBuser: TFBuser
         Size.Height = 13.000000000000000000
         Size.PlatformDefault = False
         Text = 'Pseudo :'
-        TabOrder = 3
+        TabOrder = 4
       end
     end
     object Label4: TLabel

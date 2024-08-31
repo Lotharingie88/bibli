@@ -120,8 +120,8 @@ end;
 procedure TFAuteur.btMajClick(Sender: TObject);
 begin
      edNomAut.Text:=  CbNAut.Selected.Text;
-     CbNAut.Visible:=False;
-     edNomAut.Visible:=True;
+     CbNAut.Visible:=True;
+     edNomAut.Visible:=False;
      edPNaiss.Visible:=False;
      cbPays.Selected.text:=edPNaiss.Text;
      cbPays.Visible:=True;
