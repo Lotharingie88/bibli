@@ -48,6 +48,8 @@ type
     FDQuerPerio: TFDQuery;
     FDQuerThemCd: TFDQuery;
     FDQuerCdGlob: TFDQuery;
+    FDQuerContRev: TFDQuery;
+    FDStoredProc1: TFDStoredProc;
   private
     { Déclarations privées }
   public

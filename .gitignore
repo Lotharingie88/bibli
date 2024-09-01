@@ -1,6 +1,9 @@
 #test gitignore
 #ignore le repertoire win32
 /Win32/
+/Win64/
+/Android/
+/Android64/
 # Uncomment these types if you want even more clean repository. But be careful.
 # It can make harm to an existing project source. Read explanations below.
 #

@@ -325,4 +325,17 @@ object DataModule2: TDataModule2
     Left = 224
     Top = 432
   end
+  object FDQuerContRev: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      'select * from articles')
+    Left = 304
+    Top = 440
+  end
+  object FDStoredProc1: TFDStoredProc
+    Connection = FDConnectSqlite
+    Left = 416
+    Top = 136
+  end
 end

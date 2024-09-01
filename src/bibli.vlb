@@ -199,3 +199,9 @@ Coordinates=803,384,131,105
 [FBuser.BindSourceDB3]
 Coordinates=1001,10,131,141
 
+[DataModule2.FDQuerContRev]
+Coordinates=1029,691,161,159
+
+[DataModule2.FDStoredProc1]
+Coordinates=518,188,156,51
+
