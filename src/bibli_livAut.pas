@@ -18,7 +18,6 @@ uses
 
 type
   TFAuteur = class(TForm)
-    Panel1: TPanel;
     edPren: TEdit;
     edNaiss: TEdit;
     edLNaiss: TEdit;
@@ -58,6 +57,7 @@ type
     Layout1: TLayout;
     edMaj: TEdit;
     Label7: TLabel;
+    ckAutRev: TCheckBox;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
 
@@ -143,12 +143,18 @@ end;
 
 procedure TFAuteur.btPrecClick(Sender: TObject);
 begin
+  btRec.enabled:=false;
+  btAj.Enabled:=true;
+  btAj.Enabled:=true;
 FLiv.Show;
   fAuteur.Close;
 end;
 
 procedure TFAuteur.btQuitClick(Sender: TObject);
 begin
+  btRec.enabled:=false;
+  btAj.Enabled:=true;
+  btAj.Enabled:=true;
   close();
 end;
 
@@ -176,13 +182,13 @@ begin
      FDQuerySelAut.SQL.Clear;
      if (j>0) then
      begin
-          FDQuerySelAut.SQL.Text:='UPDATE auteur SET nomauteur = :champSqlite1, prenauteur = :champSqlite2, datnaiss = :champSqlite3, vilnaiss = :champSqlite4,idnation= :pays, datdec = :champSqlite5,datmaj =:Datmaj  WHERE idauteur = :j' ;
+          FDQuerySelAut.SQL.Text:='UPDATE auteur SET nomauteur = :champSqlite1, prenauteur = :champSqlite2, datnaiss = :champSqlite3, vilnaiss = :champSqlite4,idnation= :pays, datdec = :champSqlite5,datmaj =:Datmaj,autrev:rev  WHERE idauteur = :j' ;
           FDQuerySelAut.ParamByName('j').AsInteger := j;
           FDQuerySelAut.ParamByName('champSqlite1').AsString := edNomAut.Text;
           FDQuerySelAut.ParamByName('champSqlite2').AsString := edPren.Text;
 
           if (not(deddNaiss.IsEmpty) and (deddNaiss.Text<>'01/01/001')) then
-                 FDQuerySelAut.ParamByName('champSqlite3').AsDate := StrToDate(deddNaiss.Text)
+                 FDQuerySelAut.ParamByName('champSqlite3').AsDate := deddNaiss.date
                    else
                   FDQuerySelAut.ParamByName('champSqlite3').AsString:='NULL';
           //FDQuerySelAut.ParamByName('champSqlite3').asDate := dedDNaiss.Date;
@@ -190,19 +196,24 @@ begin
           FDQuerySelAut.ParamByName('champSqlite4').AsString := edLNaiss.Text;
           //FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(edDec.Text);
           if (not(deddDec.IsEmpty) and (deddDec.Text<>'01/01/001')) then
-            FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(deddDec.Text)
+            FDQuerySelAut.ParamByName('champSqlite5').AsDate := deddDec.date
                    else
             FDQuerySelAut.ParamByName('champSqlite5').AsString:='NULL';
+            if not(ckAutrev.IsChecked) then
+               FDQuerySelAut.ParamByName('rev').AsInteger := 0
+               else
+               FDQuerySelAut.ParamByName('rev').AsInteger := 1;
+
           FDQuerySelAut.ParamByName('Datmaj').AsDate := StrToDate(Datmaj);
      end
      else
      begin
-           FDQuerySelAut.SQL.Text:='INSERT into auteur(nomauteur,prenauteur,datnaiss,vilnaiss,idnation,datdec,datmaj) VALUES (:champSqlite1,:champSqlite2,:champSqlite3,:champSqlite4,:pays,:champSqlite5,:Datmaj)';
+           FDQuerySelAut.SQL.Text:='INSERT into auteur(nomauteur,prenauteur,datnaiss,vilnaiss,idnation,datdec,datmaj,autrev) VALUES (:champSqlite1,:champSqlite2,:champSqlite3,:champSqlite4,:pays,:champSqlite5,:Datmaj,:rev)';
            FDQuerySelAut.ParamByName('champSqlite1').AsString := edNomAut.Text;
            FDQuerySelAut.ParamByName('champSqlite2').AsString := edPren.Text;
            //FDQuerySelAut.ParamByName('champSqlite3').AsDate := StrToDate(edNaiss.Text);
            if (not(deddNaiss.IsEmpty) and (deddNaiss.Text<>'01/01/001')) then
-                 FDQuerySelAut.ParamByName('champSqlite3').AsDate := StrToDate(deddNaiss.Text)
+                 FDQuerySelAut.ParamByName('champSqlite3').AsDate := deddNaiss.Date
                    else
                   FDQuerySelAut.ParamByName('champSqlite3').AsString:='NULL';
            //FDQuerySelAut.ParamByName('champSqlite3').AsDate :=dedDNaiss.date;
@@ -210,9 +221,13 @@ begin
            FDQuerySelAut.ParamByName('pays').AsInteger := cod;
            //FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(edDec.Text);
             if (not(deddDec.IsEmpty) and (deddDec.Text<>'01/01/001')) then
-            FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(deddDec.Text)
+            FDQuerySelAut.ParamByName('champSqlite5').AsDate := deddDec.date
                    else
             FDQuerySelAut.ParamByName('champSqlite5').AsString:='NULL';
+            if not(ckAutrev.IsChecked) then
+               FDQuerySelAut.ParamByName('rev').AsInteger := 0
+               else
+               FDQuerySelAut.ParamByName('rev').AsInteger := 1;
            //FDQuerySelAut.ParamByName('champSqlite5').AsDate := dedDDec.date;
            FDQuerySelAut.ParamByName('Datmaj').AsDate := StrToDate(Datmaj);
      end;
@@ -223,6 +238,10 @@ begin
             		if (Components[i] is TEdit ) then
                      begin
                        TEdit(Components[i]).Text:='';
+                     end;
+                if (Components[i] is TCheckBox ) then
+                     begin
+                       TCheckBox(Components[i]).isChecked:=false;
                      end;
                 if (Components[i] is TMemo ) then
                      begin
@@ -253,7 +272,7 @@ begin
      mOeuv.Text :='';
      datamodule2.FDQuerProc.Close;
      datamodule2.FDQuerProc.SQL.Clear;
-      req:='SELECT a.idauteur,nomauteur,prenauteur,datnaiss as dnaiss,vilnaiss,datdec as ddec,nom,titre,strftime(''%d-%m-%Y'',datach) as dach';
+      req:='SELECT a.idauteur,nomauteur,prenauteur,datnaiss as dnaiss,vilnaiss,datdec as ddec,nom,titre,strftime(''%d-%m-%Y'',datach) as dach,autrev';
       req:=req+ ' from  auteur as a left join pays as b on a.idnation=b.idnation left join livres as c on c.idauteur=a.idauteur left join achat as d on c.idtitre=d.idliv' ;
       req:= req + ' where nomauteur= :champSqlite';
      datamodule2.FDQuerProc.SQL.text:= req;
@@ -268,6 +287,11 @@ begin
            edPNaiss.Text := datamodule2.FDQuerProc.FieldByName('nom').AsString;
            //edDec.Text := dateToStr(FDQuerySelAut.FieldByName('datdec').AsDatetime);
            dedDDec.date:= datamodule2.FDQuerProc.FieldByName('ddec').asDatetime;
+           if datamodule2.FDQuerProc.FieldByName('autrev').AsInteger=0 then
+              ckAutrev.IsChecked:=false
+              else
+              ckAutrev.IsChecked:=true;
+
            if datamodule2.FDQuerProc.FieldByName('dach').AsString <>'' then
              crit:= 'X'
              else crit:= '';
@@ -293,6 +317,10 @@ begin
             		if (Components[i] is TEdit ) then
                      begin
                       TEdit(Components[i]).Text:='';
+                     end;
+                if (Components[i] is TCheckBox ) then
+                     begin
+                       TCheckBox(Components[i]).isChecked:=false;
                      end;
                 if (Components[i] is TMemo ) then
                      begin

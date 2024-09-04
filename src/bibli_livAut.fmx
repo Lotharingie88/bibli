@@ -9,118 +9,145 @@ object FAuteur: TFAuteur
   FormFactor.Devices = [Desktop]
   OnActivate = FormActivate
   DesignerMasterStyle = 0
-  object Panel1: TPanel
-    Position.X = 8.000000000000000000
+  object Layout1: TLayout
+    Position.X = -8.000000000000000000
     Position.Y = 8.000000000000000000
-    Size.Width = 249.000000000000000000
-    Size.Height = 433.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 441.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    object edPren: TEdit
+    object mOeuv: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 16.000000000000000000
+      Position.Y = 248.000000000000000000
+      Size.Width = 211.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 14
+      Viewport.Width = 211.000000000000000000
+      Viewport.Height = 121.000000000000000000
+    end
+    object ToolBar2: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 18
+      object btPrec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Prec.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btRecinit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 41.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = '<<'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object btRecfin: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 192.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = '>>'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object btQuit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 214.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+      object btRec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 105.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Enreg.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btRecClick
+      end
+      object btAj: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 73.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Ajo.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btAjClick
+      end
+      object btMaj: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 145.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'M'#224'J'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btMajClick
+      end
+    end
+    object edMaj: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 5
-      Position.X = 112.000000000000000000
-      Position.Y = 57.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
+      TabOrder = 19
+      Position.X = 152.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      CharCase = ecUpperCase
     end
-    object edNaiss: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 4
-      Position.X = 136.000000000000000000
-      Position.Y = 96.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
+    object Label7: TLabel
+      StyledSettings = []
+      Position.X = 72.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
-      Visible = False
-      CharCase = ecUpperCase
-    end
-    object edLNaiss: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 3
-      Position.X = 112.000000000000000000
-      Position.Y = 143.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      CharCase = ecUpperCase
-    end
-    object edPNaiss: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 2
-      Position.X = 112.000000000000000000
-      Position.Y = 182.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      CharCase = ecUpperCase
-    end
-    object edDec: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 1
-      Position.X = 136.000000000000000000
-      Position.Y = 216.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Visible = False
-      CharCase = ecUpperCase
-    end
-    object Label1: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 24.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Nom :'
-      TabOrder = 11
-    end
-    object Label2: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 56.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Pr'#233'nom :'
-      TabOrder = 10
-    end
-    object Label3: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 96.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Naissance :'
-      TabOrder = 9
-    end
-    object Label4: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 136.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Lieu :'
-      TabOrder = 8
-    end
-    object Label5: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 176.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'Pays :'
-      TabOrder = 7
-    end
-    object Label6: TLabel
-      Position.X = 16.000000000000000000
-      Position.Y = 216.000000000000000000
-      Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Text = 'D'#233'c'#232's :'
-      TabOrder = 6
+      TextSettings.Font.Family = 'Segoe Script'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.Font.StyleExt = {00040000000200000004000000}
+      TextSettings.FontColor = claBlueviolet
+      Text = 'Date MaJ :'
+      TabOrder = 20
     end
     object CbNAut: TComboBox
       Items.Strings = (
@@ -142,22 +169,11 @@ object FAuteur: TFAuteur
       Position.X = 112.000000000000000000
       Position.Y = 16.000000000000000000
       Size.Width = 129.000000000000000000
-      Size.Height = 33.000000000000000000
+      Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 12
       OnChange = CbNAutChange
       OnClick = CbNAutClick
-    end
-    object edNomAut: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 13
-      Position.X = 112.000000000000000000
-      Position.Y = 24.000000000000000000
-      Size.Width = 129.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      Visible = False
-      CharCase = ecUpperCase
     end
     object cbPays: TComboBox
       Items.Strings = (
@@ -387,20 +403,137 @@ object FAuteur: TFAuteur
         'ZIMBABWE')
       ItemIndex = 0
       Position.X = 112.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 17
+      Visible = False
+    end
+    object Label6: TLabel
+      Position.X = 16.000000000000000000
       Position.Y = 176.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'D'#233'c'#232's :'
+      TabOrder = 6
+    end
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pays :'
+      TabOrder = 7
+    end
+    object Label4: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 113.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Lieu :'
+      TabOrder = 8
+    end
+    object Label3: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 82.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Naissance :'
+      TabOrder = 9
+    end
+    object edPren: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 112.000000000000000000
+      Position.Y = 57.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object Label2: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 49.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pr'#233'nom :'
+      TabOrder = 10
+    end
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nom :'
+      TabOrder = 11
+    end
+    object edPNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 112.000000000000000000
+      Position.Y = 146.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object edNomAut: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 13
+      Position.X = 112.000000000000000000
+      Position.Y = 16.000000000000000000
       Size.Width = 129.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 14
       Visible = False
+      CharCase = ecUpperCase
+    end
+    object edNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.X = 112.000000000000000000
+      Position.Y = 82.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      CharCase = ecUpperCase
+    end
+    object edLNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 112.000000000000000000
+      Position.Y = 115.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object edDec: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 136.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      CharCase = ecUpperCase
     end
     object dedDNaiss: TDateEdit
       Date = 44585.000000000000000000
       IsEmpty = True
       Position.X = 112.000000000000000000
-      Position.Y = 103.000000000000000000
+      Position.Y = 89.000000000000000000
       Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 15
     end
@@ -408,152 +541,20 @@ object FAuteur: TFAuteur
       Date = 44585.000000000000000000
       IsEmpty = True
       Position.X = 112.000000000000000000
-      Position.Y = 215.000000000000000000
+      Position.Y = 176.000000000000000000
       Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 18.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 16
     end
-    object Layout1: TLayout
-      Position.X = -8.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 257.000000000000000000
-      Size.Height = 441.000000000000000000
+    object ckAutRev: TCheckBox
+      Position.X = 112.000000000000000000
+      Position.Y = 202.000000000000000000
+      Size.Width = 115.000000000000000000
+      Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 18
-      object mOeuv: TMemo
-        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-        DataDetectorTypes = []
-        Position.X = 16.000000000000000000
-        Position.Y = 248.000000000000000000
-        Size.Width = 211.000000000000000000
-        Size.Height = 121.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 12
-        Viewport.Width = 211.000000000000000000
-        Viewport.Height = 121.000000000000000000
-      end
-      object ToolBar2: TToolBar
-        Align = Bottom
-        Position.Y = 400.000000000000000000
-        Size.Width = 257.000000000000000000
-        Size.Height = 41.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 13
-        object btPrec: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 8.000000000000000000
-          Size.Width = 33.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 0
-          Text = 'Prec.'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          OnClick = btPrecClick
-        end
-        object btRecinit: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 41.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 33.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = '<<'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          Visible = False
-        end
-        object btRecfin: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 192.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 33.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 3
-          Text = '>>'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          Visible = False
-        end
-        object btQuit: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 214.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 35.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          Text = 'Quitter'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          OnClick = btQuitClick
-        end
-        object btRec: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 105.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 41.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 4
-          Text = 'Enreg.'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          OnClick = btRecClick
-        end
-        object btAj: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 73.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 33.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 5
-          Text = 'Ajo.'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          OnClick = btAjClick
-        end
-        object btMaj: TButton
-          StyledSettings = [Family, Style, FontColor]
-          Position.X = 145.000000000000000000
-          Position.Y = 1.000000000000000000
-          Size.Width = 33.000000000000000000
-          Size.Height = 41.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 6
-          Text = 'M'#224'J'
-          TextSettings.Font.Size = 10.000000000000000000
-          TextSettings.Trimming = None
-          OnClick = btMajClick
-        end
-      end
-      object edMaj: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 14
-        Position.X = 152.000000000000000000
-        Position.Y = 376.000000000000000000
-        Size.Width = 73.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object Label7: TLabel
-        StyledSettings = []
-        Position.X = 72.000000000000000000
-        Position.Y = 376.000000000000000000
-        Size.Width = 65.000000000000000000
-        Size.Height = 17.000000000000000000
-        Size.PlatformDefault = False
-        TextSettings.Font.Family = 'Segoe Script'
-        TextSettings.Font.Size = 10.000000000000000000
-        TextSettings.Font.StyleExt = {00040000000200000004000000}
-        TextSettings.FontColor = claBlueviolet
-        Text = 'Date MaJ :'
-        TabOrder = 15
-      end
+      TabOrder = 21
+      Text = 'Auteur de Revue'
     end
   end
   object FDQuerySelAut: TFDQuery
@@ -570,8 +571,8 @@ object FAuteur: TFAuteur
   end
   object BindSourceDB1: TBindSourceDB
     ScopeMappings = <>
-    Left = 24
-    Top = 48
+    Left = 168
+    Top = 272
   end
   object BindSourceDB2: TBindSourceDB
     ScopeMappings = <>
@@ -580,8 +581,8 @@ object FAuteur: TFAuteur
   end
   object BindSourceDB3: TBindSourceDB
     ScopeMappings = <>
-    Left = 72
-    Top = 56
+    Left = 208
+    Top = 272
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -609,19 +610,19 @@ object FAuteur: TFAuteur
   end
   object BindSourceDB4: TBindSourceDB
     ScopeMappings = <>
-    Left = 64
-    Top = 104
+    Left = 48
+    Top = 272
   end
   object BindSourceDB5: TBindSourceDB
     DataSet = DataModule2.FDTabPays
     ScopeMappings = <>
-    Left = 16
-    Top = 96
+    Left = 112
+    Top = 272
   end
   object BindSourceDB6: TBindSourceDB
     DataSet = DataModule2.FDQuerAuteur
     ScopeMappings = <>
-    Left = 24
-    Top = 152
+    Left = 176
+    Top = 328
   end
 end

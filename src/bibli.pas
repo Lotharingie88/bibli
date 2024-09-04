@@ -344,8 +344,8 @@ begin
                            tabCd.Enabled:=true;
                            tabDvd.Enabled:=true;
                            tabRevu.Enabled:=true;
-                           btCreate.Visible:=true;
-                           btSync.Visible:=true;
+                           btCreate.enabled:=true;
+                           btSync.enabled:=true;
                         end;
                       If prof='UTILISATEUR' then
                        begin
@@ -355,8 +355,8 @@ begin
                            tabCd.Enabled:=true;
                            tabDvd.Enabled:=true;
                            tabRevu.Enabled:=true;
-                           btCreate.Visible:=false;
-                           btSync.Visible:=false;
+                           btCreate.enabled:=false;
+                           btSync.enabled:=false;
                        end;
                       If prof='EMPRUNTEUR' then
                         begin
@@ -366,8 +366,8 @@ begin
                            tabCd.Enabled:=true;
                            tabDvd.Enabled:=true;
                            tabRevu.Enabled:=true;
-                           btCreate.Visible:=false;
-                           btSync.Visible:=false;
+                           btCreate.enabled:=false;
+                           btSync.enabled:=false;
                         end;
                        //datamodule2.fdQuerproc.SQL.Text:='INSERT into session(idsession,nom,prenom,pseudo,datdeb) VALUES (:idsess,:nom,:pren,:pseu,:deb)';
                        datamodule2.fdQuerproc.SQL.Text:='INSERT into session(nom,prenom,pseudo,datdeb) VALUES (:nom,:pren,:pseu,:deb)';

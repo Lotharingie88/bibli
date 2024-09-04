@@ -80,7 +80,7 @@ Coordinates=1014,596,44,51
 Coordinates=1064,402,144,87
 
 [DataModule2.FDQuerThem]
-Coordinates=264,596,146,51
+Coordinates=264,596,146,33
 
 [DataModule2.FDQuerRev]
 Coordinates=350,190,137,33
