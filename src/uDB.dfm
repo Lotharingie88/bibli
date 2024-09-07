@@ -27,21 +27,24 @@ object DataModule2: TDataModule2
     Top = 16
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\user\delphi\libmysql.dll'
+    VendorLib = 'C:\user\delphi\libmysql8_64.dll'
     Left = 496
     Top = 8
   end
   object FDConnectMysql: TFDConnection
+    ConnectionName = 'MyGestExp'
     Params.Strings = (
       'Server=127.0.0.1'
       'Database=bibliotheque'
       'User_Name=root'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 496
     Top = 64
   end
   object FDQuerThem: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtheme,theme from thematique where dvd=1 order by theme')
@@ -326,10 +329,11 @@ object DataModule2: TDataModule2
     Top = 432
   end
   object FDQuerContRev: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
-      'select * from articles')
+      
+        'select titrearticle, nomauteur,prenauteur from articles  as a le' +
+        'ft join auteur as b on a.idauteurarticl=b.idauteur')
     Left = 304
     Top = 440
   end

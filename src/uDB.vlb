@@ -65,7 +65,7 @@ Coordinates=294,432,72,87
 Coordinates=371,320,73,87
 
 [FDQuerThem]
-Coordinates=216,544,79,51
+Coordinates=216,544,79,87
 
 [FDQuerUser]
 Coordinates=686,10,75,123
@@ -105,4 +105,7 @@ Coordinates=99,224,94,159
 
 [FDStoredProc1]
 Coordinates=285,206,89,51
+
+[]
+Coordinates=30,278,62,33
 

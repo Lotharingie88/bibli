@@ -39,7 +39,7 @@ type
     BindingsList1: TBindingsList;
     BindSourceDB2: TBindSourceDB;
     BindSourceDB1: TBindSourceDB;
-    LinkListControlToField1: TLinkListControlToField;
+    LinkFillControlToField: TLinkFillControlToField;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

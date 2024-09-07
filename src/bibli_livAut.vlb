@@ -43,7 +43,7 @@ Coordinates=295,678,46,51
 Coordinates=422,945,46,51
 
 [DataModule2.FDQuerAct2]
-Coordinates=846,565,141,69
+Coordinates=846,565,141,87
 
 [BindSourceDB3]
 Coordinates=685,678,92,51
@@ -88,13 +88,13 @@ Coordinates=573,285,141,87
 Coordinates=82,868,152,51
 
 [BindSourceDB6]
-Coordinates=173,10,137,195
+Coordinates=230,10,137,213
 
 [BindSourceDB4]
 Coordinates=177,678,92,51
 
 [DataModule2.FDQuerProf]
-Coordinates=681,565,139,33
+Coordinates=681,565,139,87
 
 [FBibli.FDQueryMYSQL]
 Coordinates=483,868,125,51
@@ -127,7 +127,7 @@ Coordinates=898,452,160,87
 Coordinates=1173,678,40,51
 
 [CbNAut]
-Coordinates=390,46,84,123
+Coordinates=440,110,84,123
 
 [Label5]
 Coordinates=10,945,46,51
@@ -142,7 +142,7 @@ Coordinates=10,565,144,87
 Coordinates=182,791,46,51
 
 [DataModule2.FDQuerChant]
-Coordinates=180,565,148,69
+Coordinates=180,565,148,87
 
 [DataModule2.FDQuerAct]
 Coordinates=520,565,135,87
@@ -169,7 +169,7 @@ Coordinates=242,285,141,123
 Coordinates=338,791,60,51
 
 [DataModule2.FDQuerActiv]
-Coordinates=565,452,144,33
+Coordinates=565,452,144,87
 
 [btRecinit]
 Coordinates=254,791,58,51
@@ -178,7 +178,7 @@ Coordinates=254,791,58,51
 Coordinates=200,945,55,51
 
 [BindSourceDB5]
-Coordinates=669,10,124,159
+Coordinates=669,10,124,177
 
 [dedDNaiss]
 Coordinates=281,945,115,51
@@ -211,7 +211,7 @@ Coordinates=409,285,138,105
 Coordinates=10,868,46,51
 
 [DataModule2.FDQuerContRev]
-Coordinates=166,1,161,159
+Coordinates=490,230,161,159
 
 [DataModule2.FDStoredProc1]
 Coordinates=166,224,156,51

@@ -36,14 +36,15 @@ type
     BindSourceDB2: TBindSourceDB;
     navRevu: TBindNavigator;
     StringGrid1: TStringGrid;
-    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     cbNum: TComboBox;
     cbPerio: TComboBox;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     procedure btPrecClick(Sender: TObject);
     procedure btQuitClick(Sender: TObject);
     procedure btRecClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cbTitreChange(Sender: TObject);
+    procedure cbNumChange(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -85,6 +86,14 @@ begin
 
 
   end;
+end;
+
+procedure TFbibli_revcont.cbNumChange(Sender: TObject);
+begin
+   if cbNum.Selected.Text<>'' then
+    begin
+
+    end;
 end;
 
 procedure TFbibli_revcont.cbTitreChange(Sender: TObject);

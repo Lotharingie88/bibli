@@ -45,7 +45,7 @@ type
     FDQthem: TFDQuery;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
-    LinkListControlToField1: TLinkListControlToField;
+    LinkFillControlToField: TLinkFillControlToField;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
     procedure btValidClick(Sender: TObject);

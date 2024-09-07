@@ -140,7 +140,8 @@ object FEdit: TFEdit
         'INCONNU'
         'BELIN'
         'PLON'
-        'DENOEL')
+        'DENOEL'
+        'FAYARD')
       ItemIndex = 0
       Position.X = 80.000000000000000000
       Position.Y = 16.000000000000000000
@@ -400,6 +401,7 @@ object FEdit: TFEdit
         'FAYARD'
         'FOLIO'
         'LE LIVRE DE POCHE'
+        'LIBRIO'
         'NON'
         'POCKET'
         'POINTS POLICIER')
@@ -459,29 +461,41 @@ object FEdit: TFEdit
     OutputConverters = <>
     Left = 100
     Top = 181
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB4
-      FieldName = 'editpoch'
-      Control = cbPoch
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField2: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB5
-      FieldName = 'nomedit'
-      Control = cbEdit
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField3: TLinkListControlToField
+    object LinkFillControlToField: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB6
       FieldName = 'nom'
       Control = cbPays
+      Track = False
+      FillDataSource = BindSourceDB6
+      FillDisplayFieldName = 'nom'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB4
+      FieldName = 'editpoch'
+      Control = cbPoch
+      Track = False
+      FillDataSource = BindSourceDB4
+      FillDisplayFieldName = 'editpoch'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField3: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB5
+      FieldName = 'nomedit'
+      Control = cbEdit
+      Track = False
+      FillDataSource = BindSourceDB5
+      FillDisplayFieldName = 'nomedit'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

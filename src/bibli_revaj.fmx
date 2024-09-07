@@ -252,11 +252,15 @@ object Fbibli_revaj: TFbibli_revaj
     OutputConverters = <>
     Left = 20
     Top = 5
-    object LinkListControlToField1: TLinkListControlToField
+    object LinkFillControlToField: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB1
       FieldName = 'theme'
       Control = cbThem
+      Track = False
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'theme'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

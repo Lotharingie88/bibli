@@ -745,47 +745,67 @@ object fDvdAjo: TfDvdAjo
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
-    object LinkListControlToField3: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB5
-      FieldName = 'real'
-      Control = cbReal
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField4: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB2
-      FieldName = 'mes'
-      Control = cbMes
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField5: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB7
-      FieldName = 'act'
-      Control = cbAct3
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField1: TLinkListControlToField
+    object LinkFillControlToField: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB8
       FieldName = 'act'
       Control = cbAct2
+      Track = False
+      FillDataSource = BindSourceDB8
+      FillDisplayFieldName = 'act'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
-    object LinkListControlToField2: TLinkListControlToField
+    object LinkFillControlToField4: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB6
       FieldName = 'act'
       Control = cbAct1
+      Track = False
+      FillDataSource = BindSourceDB6
+      FillDisplayFieldName = 'act'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField5: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB7
+      FieldName = 'act'
+      Control = cbAct3
+      Track = False
+      FillDataSource = BindSourceDB7
+      FillDisplayFieldName = 'act'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField6: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB5
+      FieldName = 'real'
+      Control = cbReal
+      Track = False
+      FillDataSource = BindSourceDB5
+      FillDisplayFieldName = 'real'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField7: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB2
+      FieldName = 'mes'
+      Control = cbMes
+      Track = False
+      FillDataSource = BindSourceDB2
+      FillDisplayFieldName = 'mes'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

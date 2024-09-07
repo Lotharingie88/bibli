@@ -58,12 +58,12 @@ type
     BindSourceDB6: TBindSourceDB;
     LinkFillControlToField9: TLinkFillControlToField;
     BindSourceDB8: TBindSourceDB;
-    LinkListControlToField3: TLinkListControlToField;
-    LinkListControlToField4: TLinkListControlToField;
-    LinkListControlToField5: TLinkListControlToField;
     BindSourceDB7: TBindSourceDB;
-    LinkListControlToField1: TLinkListControlToField;
-    LinkListControlToField2: TLinkListControlToField;
+    LinkFillControlToField: TLinkFillControlToField;
+    LinkFillControlToField4: TLinkFillControlToField;
+    LinkFillControlToField5: TLinkFillControlToField;
+    LinkFillControlToField6: TLinkFillControlToField;
+    LinkFillControlToField7: TLinkFillControlToField;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

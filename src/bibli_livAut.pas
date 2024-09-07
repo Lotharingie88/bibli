@@ -51,13 +51,13 @@ type
     BindingsList1: TBindingsList;
     BindSourceDB4: TBindSourceDB;
     BindSourceDB5: TBindSourceDB;
-    LinkListControlToField1: TLinkListControlToField;
     BindSourceDB6: TBindSourceDB;
-    LinkListControlToField2: TLinkListControlToField;
     Layout1: TLayout;
     edMaj: TEdit;
     Label7: TLabel;
     ckAutRev: TCheckBox;
+    LinkFillControlToField: TLinkFillControlToField;
+    LinkFillControlToField2: TLinkFillControlToField;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
 
@@ -212,18 +212,19 @@ begin
            FDQuerySelAut.ParamByName('champSqlite1').AsString := edNomAut.Text;
            FDQuerySelAut.ParamByName('champSqlite2').AsString := edPren.Text;
            //FDQuerySelAut.ParamByName('champSqlite3').AsDate := StrToDate(edNaiss.Text);
-           if (not(deddNaiss.IsEmpty) and (deddNaiss.Text<>'01/01/001')) then
-                 FDQuerySelAut.ParamByName('champSqlite3').AsDate := deddNaiss.Date
-                   else
-                  FDQuerySelAut.ParamByName('champSqlite3').AsString:='NULL';
+           if (deddNaiss.IsEmpty or (deddNaiss.Text='01/01/0001')) then
+                 FDQuerySelAut.ParamByName('champSqlite3').asdate:=strtodate('0')
+                 else
+                 FDQuerySelAut.ParamByName('champSqlite3').AsDate :=StrToDate(deddNaiss.text);
+
            //FDQuerySelAut.ParamByName('champSqlite3').AsDate :=dedDNaiss.date;
            FDQuerySelAut.ParamByName('champSqlite4').AsString := edLNaiss.Text;
            FDQuerySelAut.ParamByName('pays').AsInteger := cod;
            //FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(edDec.Text);
-            if (not(deddDec.IsEmpty) and (deddDec.Text<>'01/01/001')) then
-            FDQuerySelAut.ParamByName('champSqlite5').AsDate := deddDec.date
-                   else
-            FDQuerySelAut.ParamByName('champSqlite5').AsString:='NULL';
+            if (deddDec.IsEmpty and (deddDec.Text='01/01/0001')) then
+               FDQuerySelAut.ParamByName('champSqlite5').Asdate:=strtodate('0')
+               else
+            FDQuerySelAut.ParamByName('champSqlite5').AsDate :=StrToDate(deddDec.text);
             if not(ckAutrev.IsChecked) then
                FDQuerySelAut.ParamByName('rev').AsInteger := 0
                else
@@ -285,6 +286,7 @@ begin
            dedDNaiss.date:= datamodule2.FDQuerProc.FieldByName('dnaiss').asDatetime;
            edLNaiss.Text := datamodule2.FDQuerProc.FieldByName('vilnaiss').asstring;
            edPNaiss.Text := datamodule2.FDQuerProc.FieldByName('nom').AsString;
+           cbpays.Selected.Text:= datamodule2.FDQuerProc.FieldByName('nom').AsString;
            //edDec.Text := dateToStr(FDQuerySelAut.FieldByName('datdec').AsDatetime);
            dedDDec.date:= datamodule2.FDQuerProc.FieldByName('ddec').asDatetime;
            if datamodule2.FDQuerProc.FieldByName('autrev').AsInteger=0 then

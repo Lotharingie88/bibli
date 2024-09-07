@@ -89,6 +89,7 @@ object FLacha: TFLacha
         'BONJOUR TRISTESSE'
         'CAP CANAILLE'
         'DANS L'#39'OMBRE'
+        'ECHO PARK'
         'HIVER ARCTIQUE'
         'L'#39'HERMINE ETAIT POURPRE'
         'LA FEMME AU DRAGON ROUGE'
@@ -205,11 +206,15 @@ object FLacha: TFLacha
     OutputConverters = <>
     Left = 28
     Top = 325
-    object LinkListControlToField1: TLinkListControlToField
+    object LinkFillControlToField: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB1
       FieldName = 'titre'
       Control = cbTitre
+      Track = False
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'titre'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

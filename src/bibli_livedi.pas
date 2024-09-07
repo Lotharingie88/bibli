@@ -39,14 +39,14 @@ type
     BindSourceDB2: TBindSourceDB;
     BindSourceDB3: TBindSourceDB;
     BindSourceDB4: TBindSourceDB;
-    LinkListControlToField1: TLinkListControlToField;
     BindSourceDB5: TBindSourceDB;
-    LinkListControlToField2: TLinkListControlToField;
     BindSourceDB6: TBindSourceDB;
-    LinkListControlToField3: TLinkListControlToField;
     Label1: TLabel;
     edMaj: TEdit;
     lbInfo: TLabel;
+    LinkFillControlToField: TLinkFillControlToField;
+    LinkFillControlToField2: TLinkFillControlToField;
+    LinkFillControlToField3: TLinkFillControlToField;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
     procedure btRecClick(Sender: TObject);

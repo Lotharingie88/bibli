@@ -305,8 +305,8 @@ object Flivaj: TFlivaj
       Size.Height = 66.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 19
-      Viewport.Width = 185.000000000000000000
-      Viewport.Height = 66.000000000000000000
+      Viewport.Width = 181.000000000000000000
+      Viewport.Height = 62.000000000000000000
     end
     object edNot: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -345,8 +345,8 @@ object Flivaj: TFlivaj
       Size.Height = 31.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 23
-      Viewport.Width = 209.000000000000000000
-      Viewport.Height = 31.000000000000000000
+      Viewport.Width = 205.000000000000000000
+      Viewport.Height = 27.000000000000000000
     end
     object cbTitre: TComboBox
       Items.Strings = (
@@ -451,47 +451,67 @@ object Flivaj: TFlivaj
     OutputConverters = <>
     Left = 28
     Top = 365
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB5
-      FieldName = 'editpoch'
-      Control = cbPoch
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField2: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB6
-      FieldName = 'theme'
-      Control = cbThem
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField4: TLinkListControlToField
-      Category = 'Liaisons rapides'
-      DataSource = BindSourceDB1
-      FieldName = 'nomedit'
-      Control = cbEdit
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField5: TLinkListControlToField
+    object LinkFillControlToField: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB8
       FieldName = 'aut'
       Control = cbAuteur
+      Track = False
+      FillDataSource = BindSourceDB8
+      FillDisplayFieldName = 'aut'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
-    object LinkListControlToField3: TLinkListControlToField
+    object LinkFillControlToField2: TLinkFillControlToField
       Category = 'Liaisons rapides'
       DataSource = BindSourceDB7
       FieldName = 'titre'
       Control = cbTitre
+      Track = False
+      FillDataSource = BindSourceDB7
+      FillDisplayFieldName = 'titre'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField3: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB5
+      FieldName = 'editpoch'
+      Control = cbPoch
+      Track = False
+      FillDataSource = BindSourceDB5
+      FillDisplayFieldName = 'editpoch'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField4: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'nomedit'
+      Control = cbEdit
+      Track = False
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'nomedit'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField5: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB6
+      FieldName = 'theme'
+      Control = cbThem
+      Track = False
+      FillDataSource = BindSourceDB6
+      FillDisplayFieldName = 'theme'
+      AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

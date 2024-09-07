@@ -168,6 +168,9 @@ object Fpret: TFpret
       Viewport.Height = 89.000000000000000000
     end
     object cbCD: TComboBox
+      Items.Strings = (
+        'LES FEUX D ARTIFICE'
+        'MINUTES TO MIDNIGHT')
       Position.X = 63.000000000000000000
       Position.Y = 209.000000000000000000
       Size.Width = 169.000000000000000000
@@ -298,7 +301,9 @@ object Fpret: TFpret
     end
     object cbNom: TComboBox
       Items.Strings = (
+        'ADER CLEMENT'
         'CAZAUX-DUSSOUX HERVE'
+        'EINSTEIN ALBERT'
         'POTIRON MURIEL'
         'Pascolia Laetitia'
         'Thouvenot Sylvain'
