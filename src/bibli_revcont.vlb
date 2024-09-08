@@ -80,7 +80,7 @@ Coordinates=1014,596,44,51
 Coordinates=1064,402,144,87
 
 [DataModule2.FDQuerThem]
-Coordinates=264,596,146,51
+Coordinates=264,596,146,87
 
 [DataModule2.FDQuerRev]
 Coordinates=350,190,137,33
@@ -132,7 +132,7 @@ Coordinates=420,596,63,51
 Coordinates=769,402,140,87
 
 [BindSourceDB1]
-Coordinates=350,190,125,123
+Coordinates=330,160,125,123
 
 [BindingsList1]
 Coordinates=166,224,82,33
@@ -160,11 +160,42 @@ Coordinates=963,596,66,51
 Coordinates=830,160,70,69
 
 [cbNum]
-Coordinates=840,666,84,123
+Coordinates=840,660,84,123
 
 [cbPerio]
-Coordinates=751,685,84,123
+Coordinates=700,660,84,123
 
 [navRevu]
 Coordinates=760,210,57,51
+
+[Label4]
+Coordinates=319,430,46,51
+
+[Label5]
+Coordinates=694,170,46,51
+
+[edAut]
+Coordinates=950,666,43,51
+
+[edTitr]
+Coordinates=950,170,42,51
+
+[cbAut]
+Coordinates=610,680,84,123
+
+[ckNew]
+Coordinates=1029,666,54,51
+
+[DataModule2.FDQuerAutrev]
+Coordinates=400,720,151,33
+Visible=False
+
+[BindSourceDB3]
+Coordinates=400,720,136,195
+
+[btCons]
+Coordinates=931,721,49,51
+
+[btNew]
+Coordinates=551,721,45,51
 

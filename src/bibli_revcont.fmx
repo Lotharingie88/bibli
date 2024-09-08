@@ -16,15 +16,15 @@ object Fbibli_revcont: TFbibli_revcont
     TabOrder = 0
     object ToolBar1: TToolBar
       Align = Bottom
-      Position.Y = 444.000000000000000000
+      Position.Y = 464.000000000000000000
       Size.Width = 286.000000000000000000
-      Size.Height = 49.000000000000000000
+      Size.Height = 29.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       object btPrec: TButton
         Position.X = 8.000000000000000000
-        Size.Width = 65.000000000000000000
-        Size.Height = 49.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         Text = 'Retour'
@@ -32,9 +32,9 @@ object Fbibli_revcont: TFbibli_revcont
         OnClick = btPrecClick
       end
       object btQuit: TButton
-        Position.X = 213.000000000000000000
-        Size.Width = 73.000000000000000000
-        Size.Height = 49.000000000000000000
+        Position.X = 224.000000000000000000
+        Size.Width = 62.000000000000000000
+        Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         Text = 'Quitter'
@@ -42,39 +42,57 @@ object Fbibli_revcont: TFbibli_revcont
         OnClick = btQuitClick
       end
       object btRec: TButton
-        Position.X = 120.000000000000000000
-        Size.Width = 65.000000000000000000
-        Size.Height = 49.000000000000000000
+        Position.X = 104.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
         Text = 'Enreg.'
         TextSettings.Trimming = None
         OnClick = btRecClick
       end
+      object btCons: TButton
+        Position.X = 55.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Consult.'
+        OnClick = btConsClick
+      end
+      object btNew: TButton
+        Position.X = 152.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Nouv.Art.'
+        OnClick = btNewClick
+      end
     end
     object Label1: TLabel
-      Position.X = 96.000000000000000000
-      Position.Y = 41.000000000000000000
-      Size.Width = 105.000000000000000000
-      Size.Height = 25.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       Text = 'Titre Revue :'
       TabOrder = 3
     end
     object Label2: TLabel
-      Position.X = 24.000000000000000000
-      Position.Y = 32.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 31.000000000000000000
       Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
       Text = 'Numero :'
       TabOrder = 4
     end
     object Label3: TLabel
-      Position.X = 24.000000000000000000
-      Position.Y = 64.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 56.000000000000000000
       Size.Width = 97.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
       Text = 'Periode :'
       TabOrder = 5
@@ -130,9 +148,9 @@ object Fbibli_revcont: TFbibli_revcont
         'WINGMASTERS')
       ItemIndex = 0
       Position.X = 96.000000000000000000
-      Position.Y = 8.000000000000000000
+      Position.Y = 7.000000000000000000
       Size.Width = 182.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 6
       OnChange = cbTitreChange
@@ -141,37 +159,37 @@ object Fbibli_revcont: TFbibli_revcont
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 7
       Position.X = 96.000000000000000000
-      Position.Y = 40.000000000000000000
+      Position.Y = 32.000000000000000000
       Size.Width = 182.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
     end
     object edPeriode: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 8
       Position.X = 96.000000000000000000
-      Position.Y = 73.000000000000000000
+      Position.Y = 56.000000000000000000
       Size.Width = 182.000000000000000000
-      Size.Height = 25.000000000000000000
+      Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
     end
     object memArtic: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
-      Position.X = 21.000000000000000000
-      Position.Y = 331.000000000000000000
-      Size.Width = 257.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 351.000000000000000000
+      Size.Width = 270.000000000000000000
       Size.Height = 105.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 9
-      Viewport.Width = 253.000000000000000000
+      Viewport.Width = 266.000000000000000000
       Viewport.Height = 101.000000000000000000
     end
     object StringGrid1: TStringGrid
       CanFocus = True
       ClipChildren = True
       Position.X = 8.000000000000000000
-      Position.Y = 104.000000000000000000
+      Position.Y = 81.000000000000000000
       Size.Width = 273.000000000000000000
       Size.Height = 177.000000000000000000
       Size.PlatformDefault = False
@@ -199,10 +217,67 @@ object Fbibli_revcont: TFbibli_revcont
       TabOrder = 0
       Visible = False
     end
+    object Label4: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 57.000000000000000000
+      Position.Y = 289.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 10.000000000000000000
+      Text = 'Auteur :'
+      TabOrder = 11
+      object cbAut: TComboBox
+        Items.Strings = (
+          'GROLLEAU PIERRE-HENRI')
+        Position.X = 40.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+      end
+      object edAut: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        Position.X = 40.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Label5: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Titre article :'
+      TabOrder = 12
+    end
+    object edTitr: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 13
+      Position.X = 88.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object ckNew: TCheckBox
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 289.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 14
+      Text = 'New'
+      TextSettings.Font.Size = 10.000000000000000000
+    end
   end
   object navRevu: TBindNavigator
     Position.X = 8.000000000000000000
-    Position.Y = 288.000000000000000000
+    Position.Y = 256.000000000000000000
     Size.Width = 264.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
@@ -249,11 +324,28 @@ object Fbibli_revcont: TFbibli_revcont
           MemberName = 'titrearticle'
         end>
     end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      Control = cbAut
+      Track = True
+      FillDataSource = BindSourceDB3
+      FillDisplayFieldName = 'aut'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
   end
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule2.FDQuerContRev
     ScopeMappings = <>
     Left = 208
     Top = 352
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule2.FDQuerAutrev
+    ScopeMappings = <>
+    Left = 128
+    Top = 232
   end
 end

@@ -342,4 +342,15 @@ object DataModule2: TDataModule2
     Left = 416
     Top = 136
   end
+  object FDQuerAutrev: TFDQuery
+    Active = True
+    Connection = FDConnectSqlite
+    SQL.Strings = (
+      
+        'select idauteur,nomauteur,prenauteur,nomauteur||'#39' '#39'||prenauteur ' +
+        'as aut,datnaiss,vilnaiss,datdec from auteur where autrev=1 order' +
+        ' by nomauteur')
+    Left = 24
+    Top = 440
+  end
 end

@@ -50,6 +50,7 @@ type
     FDQuerCdGlob: TFDQuery;
     FDQuerContRev: TFDQuery;
     FDStoredProc1: TFDStoredProc;
+    FDQuerAutrev: TFDQuery;
   private
     { Déclarations privées }
   public

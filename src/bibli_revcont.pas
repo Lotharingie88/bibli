@@ -39,12 +39,24 @@ type
     cbNum: TComboBox;
     cbPerio: TComboBox;
     LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    Label4: TLabel;
+    Label5: TLabel;
+    cbAut: TComboBox;
+    edTitr: TEdit;
+    edAut: TEdit;
+    ckNew: TCheckBox;
+    BindSourceDB3: TBindSourceDB;
+    LinkFillControlToField2: TLinkFillControlToField;
+    btCons: TButton;
+    btNew: TButton;
     procedure btPrecClick(Sender: TObject);
     procedure btQuitClick(Sender: TObject);
     procedure btRecClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cbTitreChange(Sender: TObject);
     procedure cbNumChange(Sender: TObject);
+    procedure btNewClick(Sender: TObject);
+    procedure btConsClick(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -60,6 +72,24 @@ implementation
   uses bibli_revue;
   var
     req,datmaj:string;
+procedure TFbibli_revcont.btConsClick(Sender: TObject);
+begin
+  btrec.Enabled:=false;
+  btnew.enabled:=false;
+  edAut.Enabled:=false;
+  edtitr.Enabled:=false;
+  cknew.Enabled:=false;
+end;
+
+procedure TFbibli_revcont.btNewClick(Sender: TObject);
+begin
+  btrec.Enabled:=true;
+  edAut.Enabled:=true;
+  edtitr.Enabled:=true;
+  cknew.Enabled:=true;
+
+end;
+
 procedure TFbibli_revcont.btPrecClick(Sender: TObject);
 begin
      Fbibli_revue.Show();
@@ -134,6 +164,11 @@ var
  i:integer;
 begin
    Datmaj := DateToStr(Date);
+   btRec.enabled:=false;
+   cbAut.visible:=false;
+   edAut.Enabled:=false;
+  edtitr.Enabled:=false;
+  cknew.Enabled:=false;
    cbnum.Visible:=false;
    cbPerio.Visible:=false;
     for i := 0 to Componentcount-1 do
