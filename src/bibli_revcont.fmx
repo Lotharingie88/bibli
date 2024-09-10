@@ -262,6 +262,7 @@ object Fbibli_revcont: TFbibli_revcont
       Size.Width = 193.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
+      CharCase = ecUpperCase
     end
     object ckNew: TCheckBox
       StyledSettings = [Family, Style, FontColor]
@@ -273,6 +274,7 @@ object Fbibli_revcont: TFbibli_revcont
       TabOrder = 14
       Text = 'New'
       TextSettings.Font.Size = 10.000000000000000000
+      OnChange = ckNewChange
     end
   end
   object navRevu: TBindNavigator

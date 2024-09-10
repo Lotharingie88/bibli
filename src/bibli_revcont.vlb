@@ -145,7 +145,7 @@ Coordinates=1029,666,161,33
 Visible=False
 
 [BindSourceDB2]
-Coordinates=1060,80,147,177
+Coordinates=1060,80,147,87
 
 [DataModule2.FDStoredProc1]
 Coordinates=500,188,156,51
@@ -164,9 +164,6 @@ Coordinates=840,660,84,123
 
 [cbPerio]
 Coordinates=700,660,84,123
-
-[navRevu]
-Coordinates=760,210,57,51
 
 [Label4]
 Coordinates=319,430,46,51
@@ -198,4 +195,7 @@ Coordinates=931,721,49,51
 
 [btNew]
 Coordinates=551,721,45,51
+
+[navRevu]
+Coordinates=760,210,57,51
 

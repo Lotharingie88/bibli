@@ -57,6 +57,7 @@ type
     procedure cbNumChange(Sender: TObject);
     procedure btNewClick(Sender: TObject);
     procedure btConsClick(Sender: TObject);
+    procedure ckNewChange(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -84,6 +85,7 @@ end;
 procedure TFbibli_revcont.btNewClick(Sender: TObject);
 begin
   btrec.Enabled:=true;
+  btcons.Enabled:=false;
   edAut.Enabled:=true;
   edtitr.Enabled:=true;
   cknew.Enabled:=true;
@@ -102,18 +104,48 @@ begin
 end;
 
 procedure TFbibli_revcont.btRecClick(Sender: TObject);
+var
+    irev,iaut : integer;
 begin
-  if cbTitre.Selected.Text<>'' then
+  if (cbTitre.Selected.Text<>'') and (cbNum.Selected.Text<>'') then
   begin
-//     datamodule2.FDQuerProc.Close;
-//     datamodule2.FDQuerProc.SQL.Clear;
-//      req:='select idarticle, titrearticle,b.auteur,datparut,digest,a.datmaj,c.theme';
-//      req:=req+ ' from  articles as a left join auteur as b on a.idauteurarticl=b.idauteur left join thematique as c on a.idthem=c.idtheme left join achrev as d on a.idrevuebibli=d.idachev' ;
-//      req:= req + ' left join editionpoche as e on a.ideditionpoche=e.ideditionpoche left join editeur as f on a.idediteur=f.idediteur where titre =:tit';
-//     datamodule2.FDQuerProc.SQL.text:= req;
-//     datamodule2.FDQuerProc.ParamByName('tit').AsString := cbTitre.Selected.Text;
-//     datamodule2.FDQuerProc.Open;
-
+    if cknew.IsChecked=false then
+      begin
+        if cbAut.Selected.Text<>'' then
+          begin
+                datamodule2.FDQuerProc.Close;
+                datamodule2.FDQuerProc.SQL.Clear;
+                req:='select idachrev';
+                req:=req+ ' from  achrev as a left join revues as b ' ;
+                req:=req+ ' on b.idrevue =a.idrev ' ;
+                req:= req + ' where b.titrerevue =:tit and a.numrevue=:num ';
+                datamodule2.FDQuerProc.SQL.text:= req;
+                datamodule2.FDQuerProc.ParamByName('tit').AsString := cbTitre.Selected.Text;
+                datamodule2.FDQuerProc.ParamByName('num').AsString := cbnum.Selected.Text;
+                datamodule2.FDQuerProc.Open;
+                irev:= datamodule2.FDQuerProc.FieldByName('idachrev').asinteger;
+                datamodule2.FDQuerProc.Close;
+                datamodule2.FDQuerProc.SQL.Clear;
+                req:='select idauteur';
+                req:=req+ ' from  auteur' ;
+                req:= req + ' where nomauteur||" "||prenauteur = :nom';
+                datamodule2.FDQuerProc.SQL.text:= req;
+                datamodule2.FDQuerProc.ParamByName('nom').AsString := cbAut.Selected.Text;
+                datamodule2.FDQuerProc.Open;
+                iaut:= datamodule2.FDQuerProc.FieldByName('idauteur').asinteger;
+                datamodule2.FDQuerProc.Close;
+                datamodule2.FDQuerProc.SQL.Clear;
+                req:='INSERT into';
+                req:=req+ ' articles(idauteurarticl,idrevuebibli,titrearticle,datmaj)' ;
+                req:= req + ' VALUES (:aut,:rev,:titr,:Datmaj)';
+                datamodule2.FDQuerProc.SQL.text:= req;
+                datamodule2.FDQuerProc.ParamByName('rev').AsInteger := irev;
+                datamodule2.FDQuerProc.ParamByName('aut').AsInteger := iaut;
+                datamodule2.FDQuerProc.ParamByName('titr').AsString := edtitr.Text;
+                datamodule2.FDQuerProc.ParamByName('Datmaj').AsDate := StrToDate(Datmaj);
+                datamodule2.FDQuerProc.execSql;
+          end;
+      end;
 
   end;
 end;
@@ -159,16 +191,32 @@ begin
   end;
 end;
 
+procedure TFbibli_revcont.ckNewChange(Sender: TObject);
+begin
+    if btnew.Enabled=true and cknew.IsChecked=true then
+      begin
+        edAut.Visible:=true;
+        cbAut.Visible:=false;
+      end;
+    if btnew.Enabled=true and cknew.IsChecked=false then
+      begin
+        edAut.Visible:=false;
+        cbAut.Visible:=true;
+      end;
+end;
+
 procedure TFbibli_revcont.FormActivate(Sender: TObject);
 var
  i:integer;
 begin
    Datmaj := DateToStr(Date);
+   btnew.Enabled:=true;
+   btcons.Enabled:=true;
    btRec.enabled:=false;
    cbAut.visible:=false;
    edAut.Enabled:=false;
-  edtitr.Enabled:=false;
-  cknew.Enabled:=false;
+   edtitr.Enabled:=false;
+   cknew.Enabled:=false;
    cbnum.Visible:=false;
    cbPerio.Visible:=false;
     for i := 0 to Componentcount-1 do
