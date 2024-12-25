@@ -7,7 +7,7 @@ Visible=False
 Coordinates=1167,105,152,33
 
 [DataModule2.FDQuerThem]
-Coordinates=10,791,146,51
+Coordinates=10,791,146,87
 
 [edDec]
 Coordinates=1027,678,45,51
@@ -211,7 +211,7 @@ Coordinates=409,285,138,105
 Coordinates=10,868,46,51
 
 [DataModule2.FDQuerContRev]
-Coordinates=490,230,161,159
+Coordinates=490,230,161,105
 
 [DataModule2.FDStoredProc1]
 Coordinates=166,224,156,51
@@ -221,4 +221,7 @@ Coordinates=365,188,61,51
 
 []
 Coordinates=494,945,47,33
+
+[DataModule2.FDQuerAutrev]
+Coordinates=166,1,151,177
 

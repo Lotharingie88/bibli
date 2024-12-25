@@ -159,6 +159,7 @@ object FAuteur: TFAuteur
         'DUMAS'
         'FOLLETT'
         'GAVAT'
+        'GROLLEAU'
         'HUGO'
         'INDRIDASON'
         'ONFRAY'

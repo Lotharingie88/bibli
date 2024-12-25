@@ -25,8 +25,8 @@ object Flivcons: TFlivcons
       Size.PlatformDefault = False
       TabOrder = 0
       RowCount = 18
-      Viewport.Width = 277.000000000000000000
-      Viewport.Height = 216.000000000000000000
+      Viewport.Width = 297.000000000000000000
+      Viewport.Height = 257.000000000000000000
     end
     object ToolBar1: TToolBar
       Align = Bottom
@@ -84,7 +84,7 @@ object Flivcons: TFlivcons
   object NavigatorBindSourceDB1: TBindNavigator
     Position.X = 24.000000000000000000
     Position.Y = 408.000000000000000000
-    Size.Width = 305.000000000000000000
+    Size.Width = 300.000000000000000000
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 10

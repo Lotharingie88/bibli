@@ -38,13 +38,11 @@ object DataModule2: TDataModule2
       'Database=bibliotheque'
       'User_Name=root'
       'DriverID=MySQL')
-    Connected = True
     LoginPrompt = False
     Left = 496
     Top = 64
   end
   object FDQuerThem: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtheme,theme from thematique where dvd=1 order by theme')
@@ -52,7 +50,6 @@ object DataModule2: TDataModule2
     Top = 192
   end
   object FDQuerFilm: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtitre,titre from dvd order by titre')
@@ -60,7 +57,6 @@ object DataModule2: TDataModule2
     Top = 256
   end
   object FDQuerAct: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -70,7 +66,6 @@ object DataModule2: TDataModule2
     Top = 8
   end
   object FDQuerReal: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -80,7 +75,6 @@ object DataModule2: TDataModule2
     Top = 64
   end
   object FDQuerMes: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -90,7 +84,6 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDTabPays: TFDTable
-    Active = True
     IndexFieldNames = 'idnation'
     DetailFields = 'idnation;nom;codinter'
     Connection = FDConnectSqlite
@@ -100,7 +93,6 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDTabGenre: TFDTable
-    Active = True
     IndexFieldNames = 'idtheme'
     DetailFields = 'theme;lctheme;idtheme;dvd'
     Connection = FDConnectSqlite
@@ -112,22 +104,22 @@ object DataModule2: TDataModule2
   object FDConnectSqlite: TFDConnection
     ConnectionName = 'gestbibli'
     Params.Strings = (
-      'DriverID=SQLite'
-      'Database=C:\user\delphi\projets\bibli\data\biblio.db'
+      
+        'Database=\\SYNAPSATNAS\Volume_2\sauvsyn7\user\delphi\projets\bib' +
+        'li\data\biblio.db'
       'DateTimeFormat=DateTime'
       'LockingMode=Normal'
-      'Synchronous=Normal')
+      'Synchronous=Normal'
+      'DriverID=SQLite')
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvAutoReconnect]
     ResourceOptions.AutoReconnect = True
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 64
   end
   object FDQuerNomAct: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -137,7 +129,6 @@ object DataModule2: TDataModule2
     Top = 192
   end
   object FDQuerLivr: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -151,7 +142,6 @@ object DataModule2: TDataModule2
     Top = 328
   end
   object FDQuerEdit: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idediteur, nomedit,idnation from editeur')
@@ -159,7 +149,6 @@ object DataModule2: TDataModule2
     Top = 328
   end
   object FDQuerEdiP: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -178,7 +167,6 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerCd: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idcd,cdnom from cd order by cdnom')
@@ -186,7 +174,6 @@ object DataModule2: TDataModule2
     Top = 72
   end
   object FDQuerRev: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idrevue,titrerevue from revues order by titrerevue')
@@ -194,7 +181,6 @@ object DataModule2: TDataModule2
     Top = 72
   end
   object FDQuerUser: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -204,7 +190,6 @@ object DataModule2: TDataModule2
     Top = 184
   end
   object FDQuerAuteur: TFDQuery
-    Active = True
     IndexFieldNames = 'aut;datdec;datnaiss;idauteur;nomauteur;prenauteur;vilnaiss'
     Connection = FDConnectSqlite
     SQL.Strings = (
@@ -215,7 +200,6 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDQuerDvdActRealGenre: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -229,7 +213,6 @@ object DataModule2: TDataModule2
     Top = 320
   end
   object FDQuerNomRealScec: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -239,7 +222,6 @@ object DataModule2: TDataModule2
     Top = 320
   end
   object FDQuerAct2: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -249,7 +231,6 @@ object DataModule2: TDataModule2
     Top = 256
   end
   object FDQuerActiv: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select cactiv,metier from activite order by metier')
@@ -257,7 +238,6 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDQuerProf: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select cprofil,profil from profil order by profil')
@@ -270,7 +250,6 @@ object DataModule2: TDataModule2
     Top = 16
   end
   object FDQuerAct3: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -281,7 +260,6 @@ object DataModule2: TDataModule2
     Top = 256
   end
   object FDQuerLivBas: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtitre,titre from livres order by titre'
@@ -290,7 +268,6 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerChant: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -300,7 +277,6 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerPerio: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idperiodicite,periode from periodicite')
@@ -308,7 +284,6 @@ object DataModule2: TDataModule2
     Top = 72
   end
   object FDQuerThemCd: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtheme,theme from thematique where cd=1 order by theme')
@@ -316,7 +291,6 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerCdGlob: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -343,7 +317,6 @@ object DataModule2: TDataModule2
     Top = 136
   end
   object FDQuerAutrev: TFDQuery
-    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       

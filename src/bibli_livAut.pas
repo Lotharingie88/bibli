@@ -190,7 +190,7 @@ begin
           if (not(deddNaiss.IsEmpty) and (deddNaiss.Text<>'01/01/001')) then
                  FDQuerySelAut.ParamByName('champSqlite3').AsDate := deddNaiss.date
                    else
-                  FDQuerySelAut.ParamByName('champSqlite3').AsString:='NULL';
+                  FDQuerySelAut.ParamByName('champSqlite3').clear;
           //FDQuerySelAut.ParamByName('champSqlite3').asDate := dedDNaiss.Date;
           FDQuerySelAut.ParamByName('pays').AsInteger := cod;
           FDQuerySelAut.ParamByName('champSqlite4').AsString := edLNaiss.Text;
@@ -198,7 +198,7 @@ begin
           if (not(deddDec.IsEmpty) and (deddDec.Text<>'01/01/001')) then
             FDQuerySelAut.ParamByName('champSqlite5').AsDate := deddDec.date
                    else
-            FDQuerySelAut.ParamByName('champSqlite5').AsString:='NULL';
+            FDQuerySelAut.ParamByName('champSqlite5').clear;
             if not(ckAutrev.IsChecked) then
                FDQuerySelAut.ParamByName('rev').AsInteger := 0
                else
@@ -213,7 +213,7 @@ begin
            FDQuerySelAut.ParamByName('champSqlite2').AsString := edPren.Text;
            //FDQuerySelAut.ParamByName('champSqlite3').AsDate := StrToDate(edNaiss.Text);
            if (deddNaiss.IsEmpty or (deddNaiss.Text='01/01/0001')) then
-                 FDQuerySelAut.ParamByName('champSqlite3').asdate:=strtodate('0')
+                 FDQuerySelAut.ParamByName('champSqlite3').clear
                  else
                  FDQuerySelAut.ParamByName('champSqlite3').AsDate :=StrToDate(deddNaiss.text);
 
@@ -222,7 +222,7 @@ begin
            FDQuerySelAut.ParamByName('pays').AsInteger := cod;
            //FDQuerySelAut.ParamByName('champSqlite5').AsDate := StrToDate(edDec.Text);
             if (deddDec.IsEmpty and (deddDec.Text='01/01/0001')) then
-               FDQuerySelAut.ParamByName('champSqlite5').Asdate:=strtodate('0')
+               FDQuerySelAut.ParamByName('champSqlite5').clear
                else
             FDQuerySelAut.ParamByName('champSqlite5').AsDate :=StrToDate(deddDec.text);
             if not(ckAutrev.IsChecked) then

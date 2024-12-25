@@ -333,7 +333,6 @@ object FBibli: TFBibli
     end
   end
   object FDQueryMYSQL: TFDQuery
-    Connection = DataModule2.FDConnectMysql
     FormatOptions.AssignedValues = [fvFmtDisplayDate]
     FormatOptions.FmtDisplayDate = 'yyyy-mm-dd'
     Left = 208

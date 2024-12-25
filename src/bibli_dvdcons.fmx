@@ -42,8 +42,8 @@ object FDVDcons: TFDVDcons
       Size.PlatformDefault = False
       TabOrder = 1
       RowCount = 6
-      Viewport.Width = 245.000000000000000000
-      Viewport.Height = 152.000000000000000000
+      Viewport.Width = 249.000000000000000000
+      Viewport.Height = 193.000000000000000000
     end
   end
   object btPrec: TButton

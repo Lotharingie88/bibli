@@ -154,6 +154,19 @@ procedure TFbibli_revcont.cbNumChange(Sender: TObject);
 begin
    if cbNum.Selected.Text<>'' then
     begin
+      if cbtitre.Selected.Text<>'' then
+        begin
+        // select titrearticle, nomauteur,prenauteur from articles  as a left join auteur as b on a.idauteurarticl=b.idauteur
+     //datamodule2.FDQuerContRev.Close;
+     //datamodule2.FDQuerContRev.SQL.Clear;
+//      req:='select idarticle, titrearticle,b.auteur,datparut,digest,a.datmaj,c.theme';
+//      req:=req+ ' from  articles as a left join auteur as b on a.idauteurarticl=b.idauteur left join thematique as c on a.idthem=c.idtheme left join achrev as d on a.idrevuebibli=d.idachev' ;
+//      req:= req + ' left join editionpoche as e on a.ideditionpoche=e.ideditionpoche left join editeur as f on a.idediteur=f.idediteur where titre =:tit';
+//     datamodule2.FDQuerProc.SQL.text:= req;
+//     datamodule2.FDQuerProc.ParamByName('tit').AsString := cbTitre.Selected.Text;
+//     datamodule2.FDQuerProc.Open;
+//     datamodule2.FDQuerProc.Close;
+       end;
 
     end;
 end;
@@ -162,8 +175,10 @@ procedure TFbibli_revcont.cbTitreChange(Sender: TObject);
 begin
     if cbTitre.Selected.Text<>'' then
   begin
-//     datamodule2.FDQuerProc.Close;
-//     datamodule2.FDQuerProc.SQL.Clear;
+
+   // select titrearticle, nomauteur,prenauteur from articles  as a left join auteur as b on a.idauteurarticl=b.idauteur
+     //datamodule2.FDQuerContRev.Close;
+     //datamodule2.FDQuerContRev.SQL.Clear;
 //      req:='select idarticle, titrearticle,b.auteur,datparut,digest,a.datmaj,c.theme';
 //      req:=req+ ' from  articles as a left join auteur as b on a.idauteurarticl=b.idauteur left join thematique as c on a.idthem=c.idtheme left join achrev as d on a.idrevuebibli=d.idachev' ;
 //      req:= req + ' left join editionpoche as e on a.ideditionpoche=e.ideditionpoche left join editeur as f on a.idediteur=f.idediteur where titre =:tit';

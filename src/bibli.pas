@@ -380,10 +380,17 @@ begin
                        datamodule2.fdQuerproc.Close;
                        layConnect.Visible:=false;
                     end;
+                    if nb=0 then
+                      begin
+                          showmessage('Votre login et/ou mot de passe est erroné ! Réessayez ou enregistrez vous ! ');
+                          edlog.Text:='';
+                          edmdp.Text:='';
+                          edlog.CanFocus:=true;
+                      end;
       end
       else
       begin
-
+         showmessage('Certains champs ne sont pas renseignés ! Réessayez ! ');
       end;
 
     //layConnect.Visible:=false;
