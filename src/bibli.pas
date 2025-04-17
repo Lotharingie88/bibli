@@ -51,6 +51,8 @@ type
     edPren: TEdit;
     edPmdp: TEdit;
     Label8: TLabel;
+    TabAide: TTabItem;
+    TabAprop: TTabItem;
     procedure btSyncClick(Sender: TObject);
     procedure btQuitClick(Sender: TObject);
     procedure TabLivrClick(Sender: TObject);

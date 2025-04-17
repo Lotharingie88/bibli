@@ -27,7 +27,7 @@ object DataModule2: TDataModule2
     Top = 16
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    VendorLib = 'C:\user\delphi\libmysql8_64.dll'
+    VendorLib = 'C:\user\GitLocal\bibli\src\libmysql.dll'
     Left = 496
     Top = 8
   end
@@ -39,10 +39,12 @@ object DataModule2: TDataModule2
       'User_Name=root'
       'DriverID=MySQL')
     LoginPrompt = False
+    BeforeConnect = FDConnectMysqlBeforeConnect
     Left = 496
     Top = 64
   end
   object FDQuerThem: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtheme,theme from thematique where dvd=1 order by theme')
@@ -50,6 +52,7 @@ object DataModule2: TDataModule2
     Top = 192
   end
   object FDQuerFilm: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       'select idtitre,titre from dvd order by titre')
@@ -57,6 +60,7 @@ object DataModule2: TDataModule2
     Top = 256
   end
   object FDQuerAct: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -66,6 +70,7 @@ object DataModule2: TDataModule2
     Top = 8
   end
   object FDQuerReal: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -75,6 +80,7 @@ object DataModule2: TDataModule2
     Top = 64
   end
   object FDQuerMes: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -84,6 +90,7 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDTabPays: TFDTable
+    Active = True
     IndexFieldNames = 'idnation'
     DetailFields = 'idnation;nom;codinter'
     Connection = FDConnectSqlite
@@ -93,6 +100,7 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDTabGenre: TFDTable
+    Active = True
     IndexFieldNames = 'idtheme'
     DetailFields = 'theme;lctheme;idtheme;dvd'
     Connection = FDConnectSqlite
@@ -104,9 +112,7 @@ object DataModule2: TDataModule2
   object FDConnectSqlite: TFDConnection
     ConnectionName = 'gestbibli'
     Params.Strings = (
-      
-        'Database=\\SYNAPSATNAS\Volume_2\sauvsyn7\user\delphi\projets\bib' +
-        'li\data\biblio.db'
+      'Database=C:\user\GitLocal\bibli\data\biblio.db'
       'DateTimeFormat=DateTime'
       'LockingMode=Normal'
       'Synchronous=Normal'
@@ -115,11 +121,13 @@ object DataModule2: TDataModule2
     FetchOptions.Mode = fmAll
     ResourceOptions.AssignedValues = [rvAutoReconnect]
     ResourceOptions.AutoReconnect = True
+    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 64
   end
   object FDQuerNomAct: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -129,6 +137,7 @@ object DataModule2: TDataModule2
     Top = 192
   end
   object FDQuerLivr: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -200,6 +209,7 @@ object DataModule2: TDataModule2
     Top = 128
   end
   object FDQuerDvdActRealGenre: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       
@@ -291,6 +301,7 @@ object DataModule2: TDataModule2
     Top = 384
   end
   object FDQuerCdGlob: TFDQuery
+    Active = True
     Connection = FDConnectSqlite
     SQL.Strings = (
       

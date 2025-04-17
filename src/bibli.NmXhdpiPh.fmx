@@ -28,6 +28,10 @@ inherited FBibli_NmXhdpiPh: TFBibli_NmXhdpiPh
         289s
         0s
         289s
+        0s
+        289s
+        0s
+        289s
         0s)
       inherited TabLivr: TTabItem
         Size.Width = 48.000000000000000000
@@ -51,6 +55,18 @@ inherited FBibli_NmXhdpiPh: TFBibli_NmXhdpiPh
         Size.Width = 24.000000000000000000
         Size.Height = 49.000000000000000000
         ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabAide: TTabItem
+        Size.Width = 34.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 64.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabAprop: TTabItem
+        Size.Width = 66.000000000000000000
+        Size.Height = 49.000000000000000000
+        ExplicitSize.cx = 64.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
       end
     end

@@ -51,6 +51,7 @@ type
     FDQuerContRev: TFDQuery;
     FDStoredProc1: TFDStoredProc;
     FDQuerAutrev: TFDQuery;
+    procedure FDConnectMysqlBeforeConnect(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -65,5 +66,17 @@ implementation
 {%CLASSGROUP 'FMX.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule2.FDConnectMysqlBeforeConnect(Sender: TObject);
+begin
+  {$IFDEF WIN32}
+    FDPhysMySQLDriverLink1.Vendorlib:='C:\user\GitLocal\bibli\src\libmysql.dll'
+
+  {$ELSE WIN64}
+    FDPhysMySQLDriverLink1.Vendorlib:='C:\user\GitLocal\bibli\src\libmysql.dll';
+    {$ENDIF}
+  //{$ELSE}
+  //{$MESSAGE};
+end;
 
 end.

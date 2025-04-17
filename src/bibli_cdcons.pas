@@ -20,12 +20,11 @@ type
     Button3: TButton;
     Button4: TButton;
     sgCD: TStringGrid;
-    BindSourceDB1: TBindSourceDB;
-    BindingsList1: TBindingsList;
-    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     NavigatorBindSourceDB1: TBindNavigator;
+    lbMaj: TLabel;
     procedure btQuitClick(Sender: TObject);
     procedure btPrecClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -39,6 +38,8 @@ implementation
 
 {$R *.fmx}
  uses bibli_cd;
+ var
+    datmaj:string;
 procedure TFcdcons.btPrecClick(Sender: TObject);
 begin
   fcd.show;
@@ -48,6 +49,11 @@ end;
 procedure TFcdcons.btQuitClick(Sender: TObject);
 begin
   Fcdcons.close;
+end;
+
+procedure TFcdcons.FormShow(Sender: TObject);
+begin
+  Datmaj := DateToStr(Date);
 end;
 
 end.
