@@ -155,6 +155,8 @@ object FBibli: TFBibli
         StyleLookup = ''
         TabOrder = 0
         Text = 'Aide'
+        ExplicitSize.cx = 44.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
       end
       object TabAprop: TTabItem
         CustomIcon = <
@@ -168,6 +170,9 @@ object FBibli: TFBibli
         StyleLookup = ''
         TabOrder = 0
         Text = 'A propos'
+        OnClick = TabApropClick
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
       end
     end
     object btBudg: TButton

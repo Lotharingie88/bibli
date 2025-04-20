@@ -389,6 +389,10 @@
             <Form>Fbparam</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="bibli_aprop.pas">
+            <Form>FAprop</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

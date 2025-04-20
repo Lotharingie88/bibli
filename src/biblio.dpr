@@ -31,7 +31,8 @@ uses
   bibli_cdach in 'bibli_cdach.pas' {Fbibli_cdach},
   bibli_cdaj in 'bibli_cdaj.pas' {Fbibli_cdaj},
   admin in 'admin.pas' {Fadmin},
-  bibli_param in 'bibli_param.pas' {Fbparam};
+  bibli_param in 'bibli_param.pas' {Fbparam},
+  bibli_aprop in 'bibli_aprop.pas' {FAprop};
 
 {$R *.res}
 
@@ -68,5 +69,6 @@ begin
   Application.CreateForm(TFcdaj, Fcdaj);
   Application.CreateForm(TFadmin, Fadmin);
   Application.CreateForm(TFbparam, Fbparam);
+  Application.CreateForm(TFAprop, FAprop);
   Application.Run;
 end.

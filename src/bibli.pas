@@ -64,6 +64,7 @@ type
     procedure btConnectClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btNouvUClick(Sender: TObject);
+    procedure TabApropClick(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -80,7 +81,7 @@ implementation
 
 {$R *.NmXhdpiPh.fmx ANDROID}
 
-uses bibli_liv1,bibli_revue,bibli_budget,bibli_dvd,bibli_cd,bibli_user,admin;
+uses bibli_liv1,bibli_revue,bibli_budget,bibli_dvd,bibli_cd,bibli_user,admin,bibli_aprop;
   var
     datmaj:string;
 procedure TFBibli.btSyncClick(Sender: TObject);
@@ -411,6 +412,11 @@ end;
 procedure TFBibli.TabDVDClick(Sender: TObject);
 begin
  Fdvd.show;
+end;
+
+procedure TFBibli.TabApropClick(Sender: TObject);
+begin
+  FAprop.Show;
 end;
 
 procedure TFBibli.TabCDClick(Sender: TObject);
