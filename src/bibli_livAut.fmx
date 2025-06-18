@@ -1,0 +1,638 @@
+object FAuteur: TFAuteur
+  Left = 0
+  Top = 0
+  Caption = 'Livres/Auteurs'
+  ClientHeight = 480
+  ClientWidth = 262
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = -8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 441.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object mOeuv: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 16.000000000000000000
+      Position.Y = 248.000000000000000000
+      Size.Width = 211.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Viewport.Width = 207.000000000000000000
+      Viewport.Height = 117.000000000000000000
+    end
+    object ToolBar2: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 19
+      object btPrec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Prec.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btRecinit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 41.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '<<'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object btRecfin: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 192.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '>>'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object btQuit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 214.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 14
+        Text = 'Quitter'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+      object btRec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 105.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 11
+        Text = 'Enreg.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btRecClick
+      end
+      object btAj: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 73.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        Text = 'Ajo.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btAjClick
+      end
+      object btMaj: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 145.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        Text = 'M'#224'J'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btMajClick
+      end
+    end
+    object edMaj: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 20
+      Position.X = 152.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label7: TLabel
+      StyledSettings = []
+      Position.X = 72.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Segoe Script'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.Font.StyleExt = {00040000000200000004000000}
+      TextSettings.FontColor = claBlueviolet
+      Text = 'Date MaJ :'
+      TabOrder = 21
+    end
+    object CbNAut: TComboBox
+      Items.Strings = (
+        'BERRY'
+        'BORROMEE'
+        'CONNELLY'
+        'CRICHTON'
+        'DOS SANTOS'
+        'DUMAS'
+        'FOLLETT'
+        'GAVAT'
+        'GROLLEAU'
+        'HUGO'
+        'INDRIDASON'
+        'ONFRAY'
+        'PIVOT'
+        'SAGAN'
+        'WERBER')
+      ItemIndex = 0
+      Position.X = 112.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = CbNAutChange
+      OnClick = CbNAutClick
+    end
+    object cbPays: TComboBox
+      Items.Strings = (
+        'ACORES'
+        'AFGHANISTAN'
+        'AFRIQUE DU SUD'
+        'ALBANIE'
+        'ALGERIE'
+        'ALLEMAGNE'
+        'ANGOLA'
+        'ANGUILLA'
+        'ANTIGUA et BARBUDA'
+        'ANTILLES NEERLANDAISES'
+        'ARABIE SAOUDITE'
+        'ARGENTINE'
+        'ARMENIE'
+        'ARUBA'
+        'AUSTRALIE'
+        'AUTRICHE'
+        'AZERBAIDJAN'
+        'BAHAMAS'
+        'BAHREIN'
+        'BANGLADESH'
+        'BARBADE'
+        'BELARUS'
+        'BELGIQUE'
+        'BELIZE'
+        'BENIN'
+        'BERMUDES'
+        'BOLIVIE'
+        'BOSNIE'
+        'BOTSWANA'
+        'BHOUTAN'
+        'BRESIL'
+        'BRUNEI'
+        'BULGARIE'
+        'BURKINA FASO'
+        'BURUNDI'
+        'CAICOS & TURCS'
+        'CAMBODGE'
+        'CAMEROUN'
+        'CANADA'
+        'CAP VERT'
+        'CAIMAN ILES'
+        'CENTRAFRIQUE'
+        'CHILI'
+        'CHINE'
+        'CHYPRE'
+        'COLOMBIE'
+        'COMORES'
+        'CONGO'
+        'COOK'
+        'COREE DU NORD'
+        'COREE DU SUD'
+        'COSTA RICA'
+        'COTE D IVOIRE'
+        'CROATIE'
+        'CUBA'
+        'DANEMARK'
+        'DJIBOUTI'
+        'DOMINIQUE'
+        'EGYPTE'
+        'EL SALVADOR'
+        'EMIRATS ARABES UNIS'
+        'EQUATEUR'
+        'ERYTHREE'
+        'ESPAGNE'
+        'ESTONIE'
+        'ETHIOPIE'
+        'FALKLAND'
+        'FEROE'
+        'FIDJI'
+        'FINLANDE'
+        'FRANCE'
+        'GABON'
+        'GAMBIE'
+        'GEORGIE'
+        'GHANA'
+        'GIBRALTAR'
+        'GRANDE BRETAGNE'
+        'GRECE'
+        'GRENADE'
+        'GUADELOUPE'
+        'GUAM'
+        'GUATEMALA'
+        'GUINEE'
+        'GUINEE BISSAU'
+        'GUINEE EQUATORIALE'
+        'GUYANA'
+        'GUYANE'
+        'HAITI'
+        'HONDURAS'
+        'HONG KONG'
+        'HONGRIE'
+        'ILE NIUE'
+        'ILE SALOMON'
+        'ILES CAROLINES'
+        'ILES MARIANNES'
+        'ILES VIERGES'
+        'INDE'
+        'INDONESIE'
+        'IRAN'
+        'IRAQ'
+        'IRLANDE'
+        'ISLANDE'
+        'ISRAEL'
+        'ITALIE'
+        'JAMAIQUE'
+        'JAPON'
+        'JORDANIE'
+        'KAZAKHSTAN'
+        'KENYA'
+        'KIRGHIZISTAN'
+        'KIRIBATI'
+        'KOWEIT'
+        'LAOS'
+        'LESOTHO'
+        'LETTONIE'
+        'LIBAN'
+        'LIBERIA'
+        'LIBYE'
+        'LIECHTENSTEIN'
+        'LITUANIE'
+        'LUXEMBOURG'
+        'MACAO'
+        'MACEDOINE'
+        'MADAGASCAR'
+        'MALAISIE'
+        'MALAWI'
+        'MALDIVES'
+        'MALI'
+        'MALTE'
+        'MAROC'
+        'MARSHALL'
+        'MARTINIQUE'
+        'MAURICE'
+        'MAURITANIE'
+        'MAYOTTE'
+        'MEXIQUE'
+        'MICRONESIE'
+        'MOLDAVIE'
+        'MONGOLIE'
+        'MONTSERRAT'
+        'MOZAMBIQUE'
+        'MYANMAR'
+        'NAMIBIE'
+        'NAURU'
+        'NEPAL'
+        'NICARAGUA'
+        'NIGER'
+        'NIGERIA'
+        'NORVEGE'
+        'NOUVELLE CALEDONIE'
+        'NOUVELLE ZELANDE'
+        'OMAN'
+        'OUGANDA'
+        'OUZBEKISTAN'
+        'PAKISTAN'
+        'PALAU'
+        'PANAMA'
+        'PAPOUASIE NOUVELLE GUINEE'
+        'PARAGUAY'
+        'PAYS BAS'
+        'PEROU'
+        'PHILIPPINES'
+        'PITCAIRN'
+        'POLOGNE'
+        'POLYNESIE FRANCAISE'
+        'PORTO RICO'
+        'PORTUGAL'
+        'QATAR'
+        'REPUBLIQUE DOMINICAINE'
+        'REPUBLIQUE TCHEQUE'
+        'REUNION'
+        'ROUMANIE'
+        'RUSSIE'
+        'RWANDA'
+        'SAINT BARTHELEMY'
+        'SAINT KITT'
+        'SAINT MARTIN'
+        'SAINT PIERRE ET MIQUELON'
+        'SAINT VINCENT'
+        'SAINTE HELENE'
+        'SAINTE LUCIE'
+        'SAMOA'
+        'SAN MARIN'
+        'SAO TOME ET PRINCIPE'
+        'SENEGAL'
+        'SEYCHELLES'
+        'SIERRA LEONE'
+        'SINGAPOUR'
+        'SLOVAQUIE'
+        'SLOVENIE'
+        'SOMALIE'
+        'SOUDAN'
+        'SRI LANKA'
+        'SUEDE'
+        'SUISSE'
+        'SURINAM'
+        'SWAZILAND'
+        'SYRIE'
+        'TADJIKISTAN'
+        'TAIWAN'
+        'TANZANIE'
+        'TCHAD'
+        'THAILANDE'
+        'TIMOR'
+        'TOGO'
+        'TONGA'
+        'TRINITE ET TOBAGO'
+        'TUNISIE'
+        'TURKMENISTAN'
+        'TURQUIE'
+        'TUVALU'
+        'UKRAINE'
+        'URUGUAY'
+        'USA'
+        'VANUATU'
+        'VATICAN'
+        'VENEZUELA'
+        'VIET NAM'
+        'WALLIS ET FUTUNA'
+        'YEMEN'
+        'YOUGOSLAVIE'
+        'CONGO REP DEMOCRATIQUE'
+        'ZAMBIE'
+        'ZIMBABWE')
+      ItemIndex = 0
+      Position.X = 112.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Visible = False
+    end
+    object Label6: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'D'#233'c'#232's :'
+      TabOrder = 13
+    end
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pays :'
+      TabOrder = 14
+    end
+    object Label4: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 113.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Lieu :'
+      TabOrder = 15
+    end
+    object Label3: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 82.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Naissance :'
+      TabOrder = 16
+    end
+    object edPren: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 112.000000000000000000
+      Position.Y = 57.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object Label2: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 49.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pr'#233'nom :'
+      TabOrder = 17
+    end
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nom :'
+      TabOrder = 18
+    end
+    object edPNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 112.000000000000000000
+      Position.Y = 146.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object edNomAut: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 112.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      CharCase = ecUpperCase
+    end
+    object edNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 12
+      Position.X = 112.000000000000000000
+      Position.Y = 82.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      CharCase = ecUpperCase
+    end
+    object edLNaiss: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 112.000000000000000000
+      Position.Y = 115.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object edDec: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 11
+      Position.X = 136.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      CharCase = ecUpperCase
+    end
+    object dedDNaiss: TDateEdit
+      Date = 44585.000000000000000000
+      IsEmpty = True
+      Position.X = 112.000000000000000000
+      Position.Y = 89.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+    object dedDDec: TDateEdit
+      Date = 44585.000000000000000000
+      Format = 'dd/mm/yyyy'
+      IsEmpty = True
+      Position.X = 112.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+    end
+    object ckAutRev: TCheckBox
+      Position.X = 112.000000000000000000
+      Position.Y = 202.000000000000000000
+      Size.Width = 115.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Auteur de Revue'
+    end
+  end
+  object FDQuerySelAut: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    SQL.Strings = (
+      'select idauteur,nomauteur from auteur order by nomauteur')
+    Left = 64
+    Top = 328
+  end
+  object FDQAutCompl: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 112
+    Top = 328
+  end
+  object BindSourceDB1: TBindSourceDB
+    ScopeMappings = <>
+    Left = 168
+    Top = 272
+  end
+  object BindSourceDB2: TBindSourceDB
+    ScopeMappings = <>
+    Left = 72
+    Top = 16
+  end
+  object BindSourceDB3: TBindSourceDB
+    ScopeMappings = <>
+    Left = 208
+    Top = 272
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 28
+    Top = 13
+    object LinkFillControlToField: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB5
+      FieldName = 'nom'
+      Control = cbPays
+      Track = False
+      FillDataSource = BindSourceDB5
+      FillDisplayFieldName = 'nom'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB6
+      FieldName = 'nomauteur'
+      Control = CbNAut
+      Track = False
+      FillDataSource = BindSourceDB6
+      FillDisplayFieldName = 'nomauteur'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB4: TBindSourceDB
+    ScopeMappings = <>
+    Left = 48
+    Top = 272
+  end
+  object BindSourceDB5: TBindSourceDB
+    DataSet = DataModule2.FDTabPays
+    ScopeMappings = <>
+    Left = 112
+    Top = 272
+  end
+  object BindSourceDB6: TBindSourceDB
+    DataSet = DataModule2.FDQuerAuteur
+    ScopeMappings = <>
+    Left = 176
+    Top = 328
+  end
+end

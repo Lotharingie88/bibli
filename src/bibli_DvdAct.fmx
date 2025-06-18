@@ -1,0 +1,703 @@
+object fDvdact: TfDvdact
+  Left = 0
+  Top = 0
+  Caption = 'DVD Acteur'
+  ClientHeight = 480
+  ClientWidth = 265
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 441.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Prec.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btAnt: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 32.000000000000000000
+        Size.Width = 17.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = '<'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+      end
+      object btRec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 114.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Enreg.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btRecClick
+      end
+      object btAjo: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 81.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Ajo.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btAjoClick
+      end
+      object BtMaj: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 145.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Maj'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = BtMajClick
+      end
+      object BtQuit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 200.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Quitter'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = BtQuitClick
+      end
+      object btPost: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 177.000000000000000000
+        Size.Width = 24.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '>'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+      end
+      object btCons: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 48.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'Cons.'
+        TextSettings.Font.Size = 10.000000000000000000
+        TextSettings.Trimming = None
+        OnClick = btConsClick
+      end
+    end
+    object cbNom: TComboBox
+      Items.Strings = (
+        'BELMONDO'
+        'BLUNT'
+        'BOURVIL'
+        'BRION'
+        'CARMET'
+        'DAMON'
+        'DENEUVE'
+        'DEPARDIEU'
+        'DESCHANEL'
+        'DESMARETS'
+        'DEWAERE'
+        'DOWNEY'
+        'EASTWOOD'
+        'FREEMAN'
+        'GABIN'
+        'HOLDEN'
+        'JOBERT'
+        'JOHANSSON'
+        'LEGUIZAMO'
+        'LIND'
+        'MONTAND'
+        'MURPHY'
+        'NOIRET'
+        'POIRET'
+        'SAWA'
+        'SIGNORET'
+        'VANNUCCHI'
+        'WAHLBERG'
+        'WAYNE')
+      ItemIndex = 0
+      Position.X = 80.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Visible = False
+      OnChange = cbNomChange
+      OnClick = cbNomChange
+    end
+    object edPren: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 80.000000000000000000
+      Position.Y = 49.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object edLieu: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 80.000000000000000000
+      Position.Y = 123.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object dedNaiss: TDateEdit
+      Date = 45358.000000000000000000
+      IsEmpty = True
+      Position.X = 80.000000000000000000
+      Position.Y = 90.000000000000000000
+      Size.Width = 162.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object dedDeces: TDateEdit
+      Date = 45358.000000000000000000
+      IsEmpty = True
+      Position.X = 80.000000000000000000
+      Position.Y = 197.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+    end
+    object memFilm: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      CharCase = ecUpperCase
+      DataDetectorTypes = []
+      Position.X = 8.000000000000000000
+      Position.Y = 280.000000000000000000
+      Size.Width = 233.000000000000000000
+      Size.Height = 97.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Viewport.Width = 229.000000000000000000
+      Viewport.Height = 93.000000000000000000
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nom :'
+      TabOrder = 12
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pr'#233'nom :'
+      TabOrder = 13
+    end
+    object Label3: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 82.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Naissance :'
+      TabOrder = 14
+    end
+    object Label4: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 123.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Lieu :'
+      TabOrder = 15
+    end
+    object Label5: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 164.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Pays :'
+      TabOrder = 16
+    end
+    object Label6: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 197.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'D'#233'c'#232's :'
+      TabOrder = 17
+    end
+    object cbPays: TComboBox
+      Items.Strings = (
+        'ACORES'
+        'AFGHANISTAN'
+        'AFRIQUE DU SUD'
+        'ALBANIE'
+        'ALGERIE'
+        'ALLEMAGNE'
+        'ANGOLA'
+        'ANGUILLA'
+        'ANTIGUA et BARBUDA'
+        'ANTILLES NEERLANDAISES'
+        'ARABIE SAOUDITE'
+        'ARGENTINE'
+        'ARMENIE'
+        'ARUBA'
+        'AUSTRALIE'
+        'AUTRICHE'
+        'AZERBAIDJAN'
+        'BAHAMAS'
+        'BAHREIN'
+        'BANGLADESH'
+        'BARBADE'
+        'BELARUS'
+        'BELGIQUE'
+        'BELIZE'
+        'BENIN'
+        'BERMUDES'
+        'BOLIVIE'
+        'BOSNIE'
+        'BOTSWANA'
+        'BHOUTAN'
+        'BRESIL'
+        'BRUNEI'
+        'BULGARIE'
+        'BURKINA FASO'
+        'BURUNDI'
+        'CAICOS & TURCS'
+        'CAMBODGE'
+        'CAMEROUN'
+        'CANADA'
+        'CAP VERT'
+        'CAIMAN ILES'
+        'CENTRAFRIQUE'
+        'CHILI'
+        'CHINE'
+        'CHYPRE'
+        'COLOMBIE'
+        'COMORES'
+        'CONGO'
+        'COOK'
+        'COREE DU NORD'
+        'COREE DU SUD'
+        'COSTA RICA'
+        'COTE D IVOIRE'
+        'CROATIE'
+        'CUBA'
+        'DANEMARK'
+        'DJIBOUTI'
+        'DOMINIQUE'
+        'EGYPTE'
+        'EL SALVADOR'
+        'EMIRATS ARABES UNIS'
+        'EQUATEUR'
+        'ERYTHREE'
+        'ESPAGNE'
+        'ESTONIE'
+        'ETHIOPIE'
+        'FALKLAND'
+        'FEROE'
+        'FIDJI'
+        'FINLANDE'
+        'FRANCE'
+        'GABON'
+        'GAMBIE'
+        'GEORGIE'
+        'GHANA'
+        'GIBRALTAR'
+        'GRANDE BRETAGNE'
+        'GRECE'
+        'GRENADE'
+        'GUADELOUPE'
+        'GUAM'
+        'GUATEMALA'
+        'GUINEE'
+        'GUINEE BISSAU'
+        'GUINEE EQUATORIALE'
+        'GUYANA'
+        'GUYANE'
+        'HAITI'
+        'HONDURAS'
+        'HONG KONG'
+        'HONGRIE'
+        'ILE NIUE'
+        'ILE SALOMON'
+        'ILES CAROLINES'
+        'ILES MARIANNES'
+        'ILES VIERGES'
+        'INDE'
+        'INDONESIE'
+        'IRAN'
+        'IRAQ'
+        'IRLANDE'
+        'ISLANDE'
+        'ISRAEL'
+        'ITALIE'
+        'JAMAIQUE'
+        'JAPON'
+        'JORDANIE'
+        'KAZAKHSTAN'
+        'KENYA'
+        'KIRGHIZISTAN'
+        'KIRIBATI'
+        'KOWEIT'
+        'LAOS'
+        'LESOTHO'
+        'LETTONIE'
+        'LIBAN'
+        'LIBERIA'
+        'LIBYE'
+        'LIECHTENSTEIN'
+        'LITUANIE'
+        'LUXEMBOURG'
+        'MACAO'
+        'MACEDOINE'
+        'MADAGASCAR'
+        'MALAISIE'
+        'MALAWI'
+        'MALDIVES'
+        'MALI'
+        'MALTE'
+        'MAROC'
+        'MARSHALL'
+        'MARTINIQUE'
+        'MAURICE'
+        'MAURITANIE'
+        'MAYOTTE'
+        'MEXIQUE'
+        'MICRONESIE'
+        'MOLDAVIE'
+        'MONGOLIE'
+        'MONTSERRAT'
+        'MOZAMBIQUE'
+        'MYANMAR'
+        'NAMIBIE'
+        'NAURU'
+        'NEPAL'
+        'NICARAGUA'
+        'NIGER'
+        'NIGERIA'
+        'NORVEGE'
+        'NOUVELLE CALEDONIE'
+        'NOUVELLE ZELANDE'
+        'OMAN'
+        'OUGANDA'
+        'OUZBEKISTAN'
+        'PAKISTAN'
+        'PALAU'
+        'PANAMA'
+        'PAPOUASIE NOUVELLE GUINEE'
+        'PARAGUAY'
+        'PAYS BAS'
+        'PEROU'
+        'PHILIPPINES'
+        'PITCAIRN'
+        'POLOGNE'
+        'POLYNESIE FRANCAISE'
+        'PORTO RICO'
+        'PORTUGAL'
+        'QATAR'
+        'REPUBLIQUE DOMINICAINE'
+        'REPUBLIQUE TCHEQUE'
+        'REUNION'
+        'ROUMANIE'
+        'RUSSIE'
+        'RWANDA'
+        'SAINT BARTHELEMY'
+        'SAINT KITT'
+        'SAINT MARTIN'
+        'SAINT PIERRE ET MIQUELON'
+        'SAINT VINCENT'
+        'SAINTE HELENE'
+        'SAINTE LUCIE'
+        'SAMOA'
+        'SAN MARIN'
+        'SAO TOME ET PRINCIPE'
+        'SENEGAL'
+        'SEYCHELLES'
+        'SIERRA LEONE'
+        'SINGAPOUR'
+        'SLOVAQUIE'
+        'SLOVENIE'
+        'SOMALIE'
+        'SOUDAN'
+        'SRI LANKA'
+        'SUEDE'
+        'SUISSE'
+        'SURINAM'
+        'SWAZILAND'
+        'SYRIE'
+        'TADJIKISTAN'
+        'TAIWAN'
+        'TANZANIE'
+        'TCHAD'
+        'THAILANDE'
+        'TIMOR'
+        'TOGO'
+        'TONGA'
+        'TRINITE ET TOBAGO'
+        'TUNISIE'
+        'TURKMENISTAN'
+        'TURQUIE'
+        'TUVALU'
+        'UKRAINE'
+        'URUGUAY'
+        'USA'
+        'VANUATU'
+        'VATICAN'
+        'VENEZUELA'
+        'VIET NAM'
+        'WALLIS ET FUTUNA'
+        'YEMEN'
+        'YOUGOSLAVIE'
+        'CONGO REP DEMOCRATIQUE'
+        'ZAMBIE'
+        'ZIMBABWE')
+      ItemIndex = 0
+      Position.X = 80.000000000000000000
+      Position.Y = 164.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+    end
+    object edNom: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 80.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+    object Label7: TLabel
+      StyledSettings = [Style]
+      Position.X = 41.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Segoe Script'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.FontColor = claBlueviolet
+      Text = 'Derni'#232're MAJ'
+      TabOrder = 18
+    end
+    object edMaj: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 10
+      Position.X = 136.000000000000000000
+      Position.Y = 376.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label8: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'R'#244'le :'
+      TabOrder = 19
+    end
+    object ckReal: TCheckBox
+      Position.X = 57.000000000000000000
+      Position.Y = 255.000000000000000000
+      Size.Width = 56.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 20
+      Text = 'R'#233'al.'
+    end
+    object ckChant: TCheckBox
+      Position.X = 137.000000000000000000
+      Position.Y = 255.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 21
+      Text = 'Chanteur'
+    end
+    object ckMes: TCheckBox
+      Position.X = 137.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Met.Sc'#232'.'
+    end
+    object ckAct: TCheckBox
+      Position.X = 57.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Acteur'
+    end
+    object cbReal: TComboBox
+      Items.Strings = (
+        'BESSON'
+        'CAMUS'
+        'EASTWOOD'
+        'JULLIAN'
+        'MONROE'
+        'NIGHT SHYAMALAN'
+        'NOLAN'
+        'RAPPENEAU'
+        'ROBERT'
+        'STERN')
+      Position.X = 80.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 22
+      Visible = False
+    end
+    object cbInterp: TComboBox
+      Items.Strings = (
+        'CALOGERO'
+        'COUTURE CHARLELIE'
+        'LINKIN PARK')
+      Position.X = 80.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 23
+      Visible = False
+    end
+  end
+  object FDQuerDvdAct: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 32
+    Top = 192
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 52
+    Top = 53
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB3
+      FieldName = 'act'
+      Control = cbNom
+      Track = True
+      FillDataSource = BindSourceDB3
+      FillDisplayFieldName = 'act'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB4
+      FieldName = 'nom'
+      Control = cbPays
+      Track = True
+      FillDataSource = BindSourceDB4
+      FillDisplayFieldName = 'nom'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField3: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      Control = cbReal
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'rea'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField4: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      Control = cbInterp
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillDisplayFieldName = 'chan'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule2.FDQuerNomAct
+    ScopeMappings = <>
+    Left = 48
+    Top = 120
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = DataModule2.FDTabPays
+    ScopeMappings = <>
+    Left = 112
+    Top = 152
+  end
+  object BindingsList2: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 57
+    Top = 8
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule2.FDQuerNomRealScec
+    ScopeMappings = <>
+    Left = 120
+    Top = 224
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule2.FDQuerChant
+    ScopeMappings = <>
+    Left = 128
+    Top = 232
+  end
+end

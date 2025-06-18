@@ -1,0 +1,234 @@
+object FLacha: TFLacha
+  Left = 0
+  Top = 0
+  Caption = 'Livres/Achat'
+  ClientHeight = 499
+  ClientWidth = 266
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 17.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 481.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 440.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Prec.'
+        TextSettings.Font.Size = 10.000000000000000000
+        OnClick = btPrecClick
+      end
+      object btQuit: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 192.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        TextSettings.Font.Size = 10.000000000000000000
+        OnClick = btQuitClick
+      end
+      object btRec: TButton
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 104.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Enreg.'
+        TextSettings.Font.Size = 10.000000000000000000
+        OnClick = btRecClick
+      end
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Titre :'
+      TabOrder = 1
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Prix (en Euro) :'
+      TabOrder = 2
+    end
+    object Label3: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Date d'#39'achat :'
+      TabOrder = 3
+    end
+    object cbTitre: TComboBox
+      Items.Strings = (
+        'A GENOUX'
+        'BONJOUR TRISTESSE'
+        'CAP CANAILLE'
+        'DANS L'#39'OMBRE'
+        'ECHO PARK'
+        'HIVER ARCTIQUE'
+        'L'#39'HERMINE ETAIT POURPRE'
+        'LA FEMME AU DRAGON ROUGE'
+        'LA MURAILLE DE LAVE'
+        'LA PROPHETIE NOSTRADAMUS'
+        'LE COMTE DE MONTE-CHRISTO'
+        'LE LAGON NOIR'
+        'LES MISERABLES'
+        'LES ROSES DE LA NUIT'
+        'NEXT'
+        'SA MAJESTE DES CHATS'
+        'UN CERTAIN SOURIRE'
+        'UN MONDE SANS FIN')
+      ItemIndex = 0
+      Position.X = 96.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      OnChange = cbTitreChange
+    end
+    object edPrix: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 96.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edDatach: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 96.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+    object Label4: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 112.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Poss'#232'de d'#233'j'#224' :'
+      TabOrder = 7
+    end
+    object Panel1: TPanel
+      Position.X = 96.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object rbO: TRadioButton
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'O'
+      end
+      object rbN: TRadioButton
+        Position.X = 80.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 33.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'N'
+      end
+    end
+    object edAuteur: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 9
+      Position.X = 96.000000000000000000
+      Position.Y = 56.000000000000000000
+      Enabled = False
+      Size.Width = 137.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label5: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Auteur :'
+      TabOrder = 10
+    end
+    object dedDach: TDateEdit
+      Date = 44586.000000000000000000
+      IsEmpty = True
+      Position.X = 96.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+    end
+  end
+  object fdqRLiv: TFDQuery
+    Connection = DataModule2.FDConnectSqlite
+    Left = 32
+    Top = 256
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 28
+    Top = 325
+    object LinkFillControlToField: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      DataSource = BindSourceDB1
+      FieldName = 'titre'
+      Control = cbTitre
+      Track = False
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'titre'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    ScopeMappings = <>
+    Left = 80
+    Top = 312
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule2.FDQuerLivr
+    ScopeMappings = <>
+    Left = 120
+    Top = 232
+  end
+end

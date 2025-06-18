@@ -1,0 +1,197 @@
+object Fcdach: TFcdach
+  Left = 0
+  Top = 0
+  Caption = 'Achat CD'
+  ClientHeight = 483
+  ClientWidth = 286
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Size.Width = 286.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 444.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        Position.X = 8.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Prec.'
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btQuit: TButton
+        Position.X = 232.000000000000000000
+        Size.Width = 46.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+      object Button3: TButton
+        Position.X = 56.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Button3'
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object Button4: TButton
+        Position.X = 189.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Button4'
+        TextSettings.Trimming = None
+        Visible = False
+      end
+      object btRec: TButton
+        Position.X = 136.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Enreg.'
+        TextSettings.Trimming = None
+        OnClick = btRecClick
+      end
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Titre :'
+      TabOrder = 1
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Prix :'
+      TabOrder = 2
+    end
+    object Label3: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Date :'
+      TabOrder = 3
+      object dedDatach: TDateEdit
+        Date = 45511.000000000000000000
+        Position.X = 32.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+    object Label4: TLabel
+      StyledSettings = []
+      Position.X = 116.000000000000000000
+      Position.Y = 399.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Segoe Script'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.Font.StyleExt = {00040000000200000004000000}
+      TextSettings.FontColor = claBlueviolet
+      Text = 'Date MaJ :'
+      TabOrder = 4
+    end
+    object edPriCd: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 40.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edMaj: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 189.000000000000000000
+      Position.Y = 391.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object cbCdTit: TComboBox
+      Items.Strings = (
+        'LES FEUX D ARTIFICE'
+        'MINUTES TO MIDNIGHT')
+      Position.X = 40.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Visible = False
+    end
+    object ckGrat: TCheckBox
+      Position.X = 152.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Gratuit'
+    end
+    object edCdTit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 9
+      Position.X = 40.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      CharCase = ecUpperCase
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule2.FDQuerCd
+    ScopeMappings = <>
+    Left = 152
+    Top = 248
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 221
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Liaisons rapides'
+      Control = cbCdTit
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'cdnom'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

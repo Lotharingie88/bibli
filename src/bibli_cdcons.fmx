@@ -1,0 +1,101 @@
+object Fcdcons: TFcdcons
+  Left = 0
+  Top = 0
+  Caption = 'Consultation CD'
+  ClientHeight = 493
+  ClientWidth = 286
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.Y = 8.000000000000000000
+    Size.Width = 286.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 444.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        Position.X = 8.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Prec.'
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btQuit: TButton
+        Position.X = 213.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Quitter'
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+      object Button3: TButton
+        Position.X = 80.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Button3'
+        TextSettings.Trimming = None
+      end
+      object Button4: TButton
+        Position.X = 153.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Button4'
+        TextSettings.Trimming = None
+      end
+    end
+    object sgCD: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 270.000000000000000000
+      Size.Height = 209.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      RowCount = 2
+      Viewport.Width = 266.000000000000000000
+      Viewport.Height = 184.000000000000000000
+    end
+    object lbMaj: TLabel
+      StyledSettings = [FontColor]
+      Position.X = 136.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Segoe Script'
+      TextSettings.Font.Size = 11.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Mis '#224' jour le :'
+      TabOrder = 2
+    end
+  end
+  object NavigatorBindSourceDB1: TBindNavigator
+    Anchors = [akLeft, akBottom]
+    Position.Y = 408.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+end

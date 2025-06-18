@@ -1,0 +1,108 @@
+object Fdvd: TFdvd
+  Left = 0
+  Top = 0
+  Caption = 'DVD'
+  ClientHeight = 480
+  ClientWidth = 262
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 441.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 400.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        Size.Width = 121.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Retour'
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+    end
+    object btQuit: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 400.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Quitter'
+      TextSettings.Trimming = None
+      OnClick = btQuitClick
+    end
+    object btDvdcons: TButton
+      Size.Width = 249.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Consulter Base DVD'
+      TextSettings.Trimming = None
+      OnClick = btDvdconsClick
+      object btDvdact: TButton
+        Position.Y = 64.000000000000000000
+        Size.Width = 249.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Ajouter/Modifier Acteur'
+        TextSettings.Trimming = None
+        OnClick = btDvdactClick
+        object btDvdajo: TButton
+          Position.Y = 64.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Ajouter/Modifier DVD'
+          TextSettings.Trimming = None
+          OnClick = btDvdajoClick
+          object btDvdreal: TButton
+            Position.Y = 64.000000000000000000
+            Size.Width = 249.000000000000000000
+            Size.Height = 65.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Text = 'Ajouter/Modifier R'#233'alisateur'
+            TextSettings.Trimming = None
+            OnClick = btDvdrealClick
+            object btDvdempr: TButton
+              Position.Y = 64.000000000000000000
+              Size.Width = 249.000000000000000000
+              Size.Height = 65.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              Text = 'Emprunter/Rendre'
+              TextSettings.Trimming = None
+              OnClick = btDvdemprClick
+            end
+          end
+        end
+      end
+    end
+  end
+  object btDvdach: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Achat DVD'
+    TextSettings.Trimming = None
+    OnClick = btDvdachClick
+  end
+end

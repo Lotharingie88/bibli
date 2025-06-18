@@ -1,0 +1,135 @@
+object Fbibli_revsuiv: TFbibli_revsuiv
+  Left = 0
+  Top = 0
+  Caption = 'Revues/Suivi'
+  ClientHeight = 493
+  ClientWidth = 286
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Size.Width = 286.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = Bottom
+      Position.Y = 444.000000000000000000
+      Size.Width = 286.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object btPrec: TButton
+        Position.X = 8.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Retour'
+        TextSettings.Trimming = None
+        OnClick = btPrecClick
+      end
+      object btQuit: TButton
+        Position.X = 221.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Quitter'
+        TextSettings.Trimming = None
+        OnClick = btQuitClick
+      end
+    end
+    object Grid1: TGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 8.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 265.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 261.000000000000000000
+      Viewport.Height = 240.000000000000000000
+    end
+    object Header1: THeader
+      Sides = [Top, Left, Bottom, Right]
+      Position.X = 8.000000000000000000
+      Position.Y = 379.000000000000000000
+      Size.Width = 265.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object Label1: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Ann'#233'e :'
+      TabOrder = 3
+    end
+    object cbAnn: TComboBox
+      Items.Strings = (
+        '1984'
+        '1985'
+        '1986'
+        '1987'
+        '1988'
+        '1989'
+        '1990'
+        '1991'
+        '1992'
+        '1993'
+        '1994'
+        '1995'
+        '1996'
+        '1997'
+        '1998'
+        '1999'
+        '2000'
+        '2001'
+        '2002'
+        '2003'
+        '2004'
+        '2005'
+        '2006'
+        '2007'
+        '2008'
+        '2009'
+        '2010'
+        '2011'
+        '2012'
+        '2013'
+        '2014'
+        '2015'
+        '2016'
+        '2017'
+        '2018'
+        '2019'
+        '2020'
+        '2021'
+        '2022'
+        '2023'
+        '2024'
+        '2025'
+        '2026'
+        '2027'
+        '2028'
+        '2029'
+        '2030')
+      Position.X = 72.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+  end
+  object FDQuery1: TFDQuery
+    Left = 176
+    Top = 32
+  end
+end
